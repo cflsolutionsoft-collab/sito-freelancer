@@ -14,11 +14,22 @@ import {
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import JsonLd from "@/components/ui/JsonLd";
+import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Servizi",
   description:
     "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino. Prezzi trasparenti a partire da €500.",
+  alternates: {
+    canonical: "https://fabioregnaud.it/servizi",
+  },
+  openGraph: {
+    title: "Servizi — Fabio Regnaud",
+    description:
+      "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino. Prezzi trasparenti a partire da €500.",
+    url: "https://fabioregnaud.it/servizi",
+  },
 };
 
 // === DATI ===
@@ -158,6 +169,15 @@ const faq = [
 export default function Servizi() {
   return (
     <>
+      {/* Structured Data */}
+      <JsonLd data={faqSchema(faq)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://fabioregnaud.it" },
+          { name: "Servizi", url: "https://fabioregnaud.it/servizi" },
+        ])}
+      />
+
       {/* Intestazione */}
       <section className="gradient-mesh relative overflow-hidden px-4 pb-8 pt-12 sm:px-6 md:pb-12 md:pt-20 lg:px-8">
         <div className="absolute right-0 top-0 h-64 w-64 opacity-[0.05]">

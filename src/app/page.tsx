@@ -14,6 +14,12 @@ import {
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import JsonLd from "@/components/ui/JsonLd";
+import {
+  professionalServiceSchema,
+  webSiteSchema,
+  breadcrumbSchema,
+} from "@/lib/schema";
 
 // === DATI SEZIONI ===
 
@@ -97,6 +103,15 @@ const vantaggi = [
 export default function Home() {
   return (
     <>
+      {/* Structured Data */}
+      <JsonLd data={professionalServiceSchema()} />
+      <JsonLd data={webSiteSchema()} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://fabioregnaud.it" },
+        ])}
+      />
+
       {/* Hero con gradient mesh e elementi decorativi */}
       <section className="gradient-mesh relative overflow-hidden px-4 pb-16 pt-16 sm:px-6 md:pb-24 md:pt-24 lg:px-8">
         {/* Decorazioni geometriche */}

@@ -4,11 +4,22 @@ import type { Metadata } from "next";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import JsonLd from "@/components/ui/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
     "Progetti web realizzati per attività locali a Torino. Siti vetrina, sistemi di prenotazione e soluzioni su misura.",
+  alternates: {
+    canonical: "https://fabioregnaud.it/portfolio",
+  },
+  openGraph: {
+    title: "Portfolio — Fabio Regnaud",
+    description:
+      "Progetti web realizzati per attività locali a Torino. Siti vetrina, sistemi di prenotazione e soluzioni su misura.",
+    url: "https://fabioregnaud.it/portfolio",
+  },
 };
 
 // === DATI PROGETTI ===
@@ -58,6 +69,14 @@ const progetti = [
 export default function Portfolio() {
   return (
     <>
+      {/* Structured Data */}
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "https://fabioregnaud.it" },
+          { name: "Portfolio", url: "https://fabioregnaud.it/portfolio" },
+        ])}
+      />
+
       {/* Intestazione */}
       <section className="gradient-mesh relative overflow-hidden px-4 pb-8 pt-12 sm:px-6 md:pb-12 md:pt-20 lg:px-8">
         <div className="absolute left-0 top-0 h-64 w-64 opacity-[0.05]">

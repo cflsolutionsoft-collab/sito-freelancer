@@ -6,6 +6,8 @@ import Footer from "@/components/layout/Footer";
 import ErrorBoundary from "@/components/layout/ErrorBoundary";
 import "./globals.css";
 
+const SITE_URL = "https://fabioregnaud.it";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,6 +26,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Fabio Regnaud — Web Designer Freelance a Torino",
     template: "%s — Fabio Regnaud",
@@ -35,7 +38,34 @@ export const metadata: Metadata = {
     "sito web Torino",
     "realizzazione siti web Torino",
     "sito web piccole attività Torino",
+    "web designer economico Torino",
   ],
+  authors: [{ name: "Fabio Regnaud" }],
+  creator: "Fabio Regnaud",
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+  },
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    type: "website",
+    locale: "it_IT",
+    url: SITE_URL,
+    siteName: "Fabio Regnaud — Web Designer Freelance",
+    title: "Fabio Regnaud — Web Designer Freelance a Torino",
+    description:
+      "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fabio Regnaud — Web Designer Freelance a Torino",
+    description:
+      "Creo siti web professionali e veloci per piccole attività a Torino.",
+  },
 };
 
 export default function RootLayout({
