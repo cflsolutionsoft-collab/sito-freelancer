@@ -1,7 +1,7 @@
-# Contesto Progetto — [NOME PROGETTO]
+# Contesto Progetto — freelancer
 
 ## Obiettivo
-[Descrizione in 2-3 frasi di cosa fa il progetto e quale problema risolve]
+Sito personale per presentare servizi, progetti e contatti da freelancer.
 
 ## Utenti target
 [Chi userà questa applicazione? Es: studenti, insegnanti, clienti di un e-commerce...]
