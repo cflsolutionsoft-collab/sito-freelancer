@@ -162,8 +162,9 @@ export default function Home() {
             </h1>
 
             <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-              Siti professionali, veloci e ottimizzati per Google. Pensati per le
-              piccole attività di Torino che vogliono farsi trovare online.
+              Realizzo siti web professionali, veloci e ottimizzati per Google.
+              Pensati per le piccole attività di Torino che vogliono farsi
+              trovare online dai propri clienti.
             </p>
 
             <div className="animate-fade-in-up delay-300 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -185,12 +186,13 @@ export default function Home() {
             Pensavi di fartelo da solo?
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
-            Perché un sito su misura batte{" "}
+            Perché un sito web su misura batte{" "}
             <span className="font-display italic">qualsiasi template</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
             Le piattaforme fai-da-te sembrano convenienti, ma alla lunga costano
-            di più e rendono di meno. Ecco i numeri.
+            di più e rendono di meno. Un sito web professionale per la tua
+            attività a Torino è un investimento che si ripaga.
           </p>
         </div>
 
@@ -271,7 +273,7 @@ export default function Home() {
             <span className="font-display italic">situazioni?</span>
           </h2>
           <p className="mt-3 text-lg text-muted">
-            Sono problemi comuni, ma hanno una soluzione semplice.
+            Sono problemi comuni per le attività locali. Ma hanno una soluzione.
           </p>
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -305,9 +307,9 @@ export default function Home() {
             <span className="font-display italic">lavoro</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
-            Prima di scrivere una riga di codice, studio la tua attività.
-            Così il sito non è bello e basta — è costruito per funzionare
-            nel tuo mercato.
+            Prima di scrivere una riga di codice, studio la tua attività
+            e il mercato locale a Torino. Così il sito web non è bello e
+            basta — è costruito per portarti clienti.
           </p>
         </div>
         <div className="relative mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -435,7 +437,7 @@ export default function Home() {
             <span className="font-display italic">realizzati</span>
           </h2>
           <p className="mt-3 text-lg text-muted">
-            Alcuni dei progetti che ho realizzato per attività come la tua.
+            Siti web realizzati per attività locali a Torino e dintorni.
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
@@ -514,9 +516,8 @@ export default function Home() {
               Hai un&apos;attività a Torino?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
-              Raccontami cosa fai e insieme troviamo la soluzione migliore per
-              portare la tua attività online. La prima consulenza è gratuita e
-              senza impegno.
+              Raccontami cosa fai e insieme creiamo il sito web perfetto per
+              la tua attività. La prima consulenza è gratuita e senza impegno.
             </p>
             <div className="mt-10">
               <Button href="/contatti" size="lg" variant="accent">

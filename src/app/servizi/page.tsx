@@ -193,12 +193,12 @@ export default function Servizi() {
             Servizi
           </p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
-            Soluzioni su misura per la tua{" "}
-            <span className="font-display italic text-primary">attività</span>
+            Realizzazione siti web a{" "}
+            <span className="font-display italic text-primary">Torino</span>
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Siti costruiti su misura, non template tutti uguali. Prezzi chiari e
-            trasparenti, senza sorprese.
+            Siti web professionali costruiti su misura per piccole attività
+            e liberi professionisti. Prezzi chiari e trasparenti, senza sorprese.
           </p>
         </div>
       </section>
@@ -214,8 +214,9 @@ export default function Servizi() {
             <span className="font-display italic">sito</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
-            Ogni progetto segue un percorso strutturato. Niente improvvisazione
-            — solo un metodo collaudato che porta a risultati concreti.
+            Ogni sito web che realizzo segue un percorso strutturato.
+            Niente improvvisazione — solo un metodo collaudato che porta
+            a risultati concreti per la tua attività.
           </p>
         </div>
         <div className="mt-12 space-y-6">
@@ -340,8 +341,8 @@ export default function Servizi() {
             <span className="font-display italic">fai-da-te?</span>
           </h2>
           <p className="mt-3 text-lg text-muted">
-            Con una piattaforma a template hai un sito. Con me hai uno strumento
-            che lavora per portarti clienti.
+            Con una piattaforma a template hai un sito generico. Con un web
+            designer freelance hai un sito web che lavora per portarti clienti.
           </p>
         </div>
         <div className="mt-12 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
@@ -530,8 +531,8 @@ export default function Servizi() {
               Non sai quale pacchetto fa per te?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
-              Scrivimi e ne parliamo insieme, senza impegno. Ti aiuto a capire
-              la soluzione migliore per la tua attività.
+              Scrivimi e ne parliamo insieme, senza impegno. Ti aiuto a
+              scegliere il sito web giusto per la tua attività a Torino.
             </p>
             <Button
               href="/contatti"

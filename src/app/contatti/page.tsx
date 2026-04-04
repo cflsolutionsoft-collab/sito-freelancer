@@ -41,8 +41,8 @@ export default function Contatti() {
             <span className="font-display italic text-primary">progetto</span>
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Scrivimi per raccontarmi la tua idea. Rispondo entro 24 ore e la
-            prima consulenza è gratuita e senza impegno.
+            Cerchi un web designer freelance a Torino? Scrivimi per raccontarmi
+            la tua idea. Rispondo entro 24 ore e la prima consulenza è gratuita.
           </p>
         </div>
       </section>

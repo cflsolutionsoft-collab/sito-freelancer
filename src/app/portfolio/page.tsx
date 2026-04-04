@@ -93,12 +93,12 @@ export default function Portfolio() {
             Portfolio
           </p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
-            Lavori{" "}
+            Siti web{" "}
             <span className="font-display italic text-primary">realizzati</span>
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Alcuni dei progetti che ho realizzato per attività come la tua. Ogni
-            sito è costruito su misura per risolvere problemi concreti.
+            Progetti web realizzati per attività locali a Torino e dintorni.
+            Ogni sito è costruito su misura per risolvere problemi concreti.
           </p>
         </div>
       </section>
@@ -207,8 +207,8 @@ export default function Portfolio() {
               Vuoi un risultato simile?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
-              Raccontami cosa fai e insieme costruiamo il sito perfetto per te.
-              La prima consulenza è gratuita.
+              Raccontami la tua attività e insieme realizziamo il sito web
+              perfetto per te. La prima consulenza è gratuita.
             </p>
             <Button
               href="/contatti"
