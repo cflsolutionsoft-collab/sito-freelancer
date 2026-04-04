@@ -61,11 +61,11 @@ const vantaggi = [
   },
   {
     icon: User,
-    titolo: "Parli con me, non con un chatbot",
-    numero: "24h",
-    confronto: "risposta",
+    titolo: "Costruito insieme a te, di persona",
+    numero: "1:1",
+    confronto: "dedicato",
     descrizione:
-      "Hai bisogno di cambiare un orario sul sito? Mi mandi un messaggio e lo faccio io. Nessun ticket, nessuna attesa, nessun pannello da imparare.",
+      "Ci incontriamo, ascolto le tue esigenze e costruisco il sito su misura per te. Alla consegna hai anche una dashboard semplice per aggiornare orari, foto e contenuti in autonomia.",
   },
   {
     icon: Zap,
