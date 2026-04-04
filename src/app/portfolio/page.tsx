@@ -26,6 +26,26 @@ export const metadata: Metadata = {
 
 const progetti = [
   {
+    id: "doppiouno",
+    nome: "Doppio Uno",
+    tipo: "Web app + prenotazioni",
+    descrizione:
+      "Piattaforma web per un'associazione ludica con centinaia di giochi da tavolo. I visitatori esplorano il catalogo giochi, consultano eventi e aperture straordinarie. I soci prenotano tavoli scegliendo data, orario e gioco da una mappa interattiva della sala. Lo staff gestisce giochi, tavoli, sale e prenotazioni da un pannello admin con permessi personalizzati.",
+    problema:
+      "L'associazione non aveva modo di mostrare il proprio catalogo giochi online né di gestire le prenotazioni dei tavoli in modo organizzato.",
+    soluzione:
+      "Una web app con catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala e una dashboard admin completa con gestione ruoli e permessi per lo staff.",
+    url: "https://www.doppiouno.it",
+    tecnologie: [
+      "Web app personalizzata",
+      "Catalogo giochi",
+      "Prenotazione tavoli",
+      "Mappa sala interattiva",
+      "Dashboard multi-ruolo",
+    ],
+    colore: "from-amber-500/10 to-orange-500/10",
+  },
+  {
     id: "danorasud",
     nome: "Danorasud",
     tipo: "Vetrina + prenotazioni + pagamenti",
@@ -44,26 +64,6 @@ const progetti = [
       "Email automatiche",
     ],
     colore: "from-indigo-500/10 to-violet-500/10",
-  },
-  {
-    id: "doppiouno",
-    nome: "Doppio Uno",
-    tipo: "Web app + prenotazioni",
-    descrizione:
-      "Piattaforma web per un'associazione ludica con centinaia di giochi da tavolo. I visitatori esplorano il catalogo giochi, consultano eventi e aperture straordinarie. I soci prenotano tavoli scegliendo data, orario e gioco da una mappa interattiva della sala. Lo staff gestisce giochi, tavoli, sale e prenotazioni da un pannello admin con permessi personalizzati.",
-    problema:
-      "L'associazione non aveva modo di mostrare il proprio catalogo giochi online né di gestire le prenotazioni dei tavoli in modo organizzato.",
-    soluzione:
-      "Una web app con catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala e una dashboard admin completa con gestione ruoli e permessi per lo staff.",
-    url: null,
-    tecnologie: [
-      "Web app personalizzata",
-      "Catalogo giochi",
-      "Prenotazione tavoli",
-      "Mappa sala interattiva",
-      "Dashboard multi-ruolo",
-    ],
-    colore: "from-amber-500/10 to-orange-500/10",
   },
 ];
 
