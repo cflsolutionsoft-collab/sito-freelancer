@@ -380,14 +380,14 @@ export default function Home() {
             </div>
             <div className="p-6">
               <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                Sito vetrina
+                Vetrina + prenotazioni + pagamenti
               </span>
               <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-primary">
-                Danorasud — Sito chiesa
+                Danorasud — Home restaurant
               </h3>
               <p className="mt-1 text-sm text-muted">
-                Sito vetrina moderno e responsive per una comunità religiosa
-                locale.
+                Sito con calendario serate, prenotazione online e pagamento
+                integrato per un home restaurant.
               </p>
             </div>
           </a>
@@ -398,19 +398,20 @@ export default function Home() {
           >
             <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
               <div className="flex h-full items-center justify-center text-sm text-muted">
-                Screenshot doppiounoludoteca.it
+                Screenshot doppiouno.it
               </div>
               <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />
             </div>
             <div className="p-6">
               <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                Vetrina + prenotazioni
+                Web app + prenotazioni
               </span>
               <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-primary">
-                Doppio Uno — Ludoteca e ristorante
+                Doppio Uno — Ludoteca
               </h3>
               <p className="mt-1 text-sm text-muted">
-                Sito con sistema di prenotazione online e pagamenti integrati.
+                Piattaforma con catalogo giochi, prenotazione tavoli e
+                dashboard di gestione per un&apos;associazione ludica.
               </p>
             </div>
           </a>

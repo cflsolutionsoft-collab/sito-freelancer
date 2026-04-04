@@ -28,37 +28,40 @@ const progetti = [
   {
     id: "danorasud",
     nome: "Danorasud",
-    tipo: "Sito vetrina",
+    tipo: "Vetrina + prenotazioni + pagamenti",
     descrizione:
-      "Sito web moderno e responsive per una comunità religiosa locale. Design pulito e accogliente, ottimizzato per fornire tutte le informazioni utili ai fedeli: orari, eventi, contatti e storia della comunità.",
+      "Piattaforma completa per un home restaurant a Rivarolo Canavese. I clienti possono consultare il calendario delle serate, prenotare il proprio posto attraverso un flusso guidato e pagare direttamente online. Lo chef gestisce serate, menu e prenotazioni da una dashboard dedicata.",
     problema:
-      "La comunità non aveva una presenza online e faticava a comunicare orari ed eventi ai propri membri.",
+      "Il ristorante gestiva le prenotazioni manualmente via telefono e messaggi, con il rischio di overbooking e nessun sistema per raccogliere i pagamenti in anticipo.",
     soluzione:
-      "Un sito chiaro e semplice da navigare, accessibile da qualsiasi dispositivo, che permette di trovare rapidamente tutte le informazioni.",
+      "Un sito con calendario serate, prenotazione a step (data, persone, menu, pagamento), conferma automatica via email e una dashboard completa per gestire il tutto in autonomia.",
     url: "https://www.danorasud.it",
     tecnologie: [
       "Sito personalizzato",
-      "Design responsive",
-      "Ottimizzato per mobile",
+      "Prenotazione online",
+      "Pagamenti Stripe",
+      "Dashboard gestione",
+      "Email automatiche",
     ],
     colore: "from-indigo-500/10 to-violet-500/10",
   },
   {
-    id: "doppiounoludoteca",
-    nome: "Doppio Uno Ludoteca",
-    tipo: "Sito vetrina + prenotazioni",
+    id: "doppiouno",
+    nome: "Doppio Uno",
+    tipo: "Web app + prenotazioni",
     descrizione:
-      "Sito web per una ludoteca e ristorante con sistema di prenotazione integrato. I clienti possono prenotare un tavolo direttamente online con conferma immediata e pagamento anticipato opzionale.",
+      "Piattaforma web per un'associazione ludica con centinaia di giochi da tavolo. I visitatori esplorano il catalogo giochi, consultano eventi e aperture straordinarie. I soci prenotano tavoli scegliendo data, orario e gioco da una mappa interattiva della sala. Lo staff gestisce giochi, tavoli, sale e prenotazioni da un pannello admin con permessi personalizzati.",
     problema:
-      "L'attività gestiva le prenotazioni solo telefonicamente, perdendo clienti fuori orario e subendo frequenti no-show.",
+      "L'associazione non aveva modo di mostrare il proprio catalogo giochi online né di gestire le prenotazioni dei tavoli in modo organizzato.",
     soluzione:
-      "Un sistema di prenotazione online disponibile 24/7 con notifiche automatiche e pagamento anticipato per ridurre le mancate presenze.",
+      "Una web app con catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala e una dashboard admin completa con gestione ruoli e permessi per lo staff.",
     url: null,
     tecnologie: [
-      "Sito personalizzato",
-      "Sistema prenotazioni",
-      "Pagamenti online",
-      "Notifiche automatiche",
+      "Web app personalizzata",
+      "Catalogo giochi",
+      "Prenotazione tavoli",
+      "Mappa sala interattiva",
+      "Dashboard multi-ruolo",
     ],
     colore: "from-amber-500/10 to-orange-500/10",
   },
