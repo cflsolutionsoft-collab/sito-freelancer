@@ -203,6 +203,68 @@ export default function Servizi() {
         </div>
       </section>
 
+      {/* Come lavoro — versione dettagliata */}
+      <SectionWrapper>
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+            Il mio metodo
+          </p>
+          <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
+            Come nasce il tuo{" "}
+            <span className="font-display italic">sito</span>
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
+            Ogni progetto segue un percorso strutturato. Niente improvvisazione
+            — solo un metodo collaudato che porta a risultati concreti.
+          </p>
+        </div>
+        <div className="mt-12 space-y-6">
+          {[
+            {
+              step: "01",
+              titolo: "Ascolto",
+              descrizione:
+                "Ci incontriamo di persona a Torino. Capisco chi sei, cosa fa la tua attività, chi sono i tuoi clienti e quali obiettivi vuoi raggiungere con il sito. Nessun questionario online — una conversazione vera, davanti a un caffè.",
+            },
+            {
+              step: "02",
+              titolo: "Analisi",
+              descrizione:
+                "Studio il tuo settore e i tuoi concorrenti nella zona. Cosa fanno online? Cosa manca? Dove puoi distinguerti? Questa fase è fondamentale: un sito che funziona nasce dalla conoscenza del mercato, non solo dall'estetica.",
+            },
+            {
+              step: "03",
+              titolo: "Costruzione",
+              descrizione:
+                "Realizzo il sito su misura basandomi su quello che abbiamo definito insieme. Ti mostro i progressi durante lo sviluppo e ci allineiamo con briefing periodici, così il risultato finale è esattamente quello che ti aspetti.",
+            },
+            {
+              step: "04",
+              titolo: "Consegna e autonomia",
+              descrizione:
+                "Il sito va online con una dashboard personalizzata per gestirlo in autonomia. Ti faccio vedere come funziona tutto. E dopo la consegna resto il tuo riferimento — il primo anno di manutenzione è incluso.",
+            },
+          ].map((item, i) => (
+            <div
+              key={item.step}
+              className={`group flex gap-6 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-primary/20 hover:shadow-md sm:p-8 ${
+                i % 2 === 1 ? "sm:flex-row-reverse sm:text-right" : ""
+              }`}
+            >
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20">
+                <span className="text-xl font-bold">{item.step}</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">{item.titolo}</h3>
+                <p className="mt-2 leading-relaxed text-muted">
+                  {item.descrizione}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+
       {/* Pacchetti */}
       <SectionWrapper background="surface">
         <div className="grid gap-8 lg:grid-cols-2">

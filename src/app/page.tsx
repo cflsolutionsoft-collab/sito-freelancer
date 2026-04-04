@@ -294,8 +294,78 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* Servizi preview */}
+      {/* Come lavoro */}
       <SectionWrapper>
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+            Il mio metodo
+          </p>
+          <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
+            Come{" "}
+            <span className="font-display italic">lavoro</span>
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
+            Prima di scrivere una riga di codice, studio la tua attività.
+            Così il sito non è bello e basta — è costruito per funzionare
+            nel tuo mercato.
+          </p>
+        </div>
+        <div className="relative mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Linea connettore (desktop) */}
+          <div className="absolute left-0 right-0 top-10 hidden h-0.5 bg-gradient-to-r from-transparent via-border to-transparent lg:block" />
+
+          {[
+            {
+              step: "01",
+              titolo: "Ascolto",
+              descrizione:
+                "Ci incontriamo di persona. Capisco la tua attività, i tuoi obiettivi e chi sono i tuoi clienti.",
+            },
+            {
+              step: "02",
+              titolo: "Analisi",
+              descrizione:
+                "Studio i tuoi concorrenti e il mercato locale. Così il sito si distingue da quello degli altri.",
+            },
+            {
+              step: "03",
+              titolo: "Costruzione",
+              descrizione:
+                "Realizzo il sito su misura per il tuo settore. Ti aggiorno durante tutto il percorso.",
+            },
+            {
+              step: "04",
+              titolo: "Consegna",
+              descrizione:
+                "Il sito va online con una dashboard per gestirlo in autonomia. Ti seguo anche dopo.",
+            },
+          ].map((item, i) => (
+            <div
+              key={item.step}
+              className={`animate-fade-in-up relative text-center ${
+                i === 1
+                  ? "delay-100"
+                  : i === 2
+                    ? "delay-200"
+                    : i === 3
+                      ? "delay-300"
+                      : ""
+              }`}
+            >
+              <div className="relative mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-lg shadow-primary/20">
+                <span className="text-2xl font-bold">{item.step}</span>
+              </div>
+              <h3 className="text-lg font-semibold">{item.titolo}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {item.descrizione}
+              </p>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      {/* Servizi preview */}
+      <SectionWrapper background="surface">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Cosa posso fare per te
