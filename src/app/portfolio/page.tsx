@@ -57,7 +57,7 @@ const progetti = [
       "Il ristorante gestiva le prenotazioni manualmente via telefono e messaggi, con il rischio di overbooking e nessun sistema per raccogliere i pagamenti in anticipo.",
     soluzione:
       "Un sito con calendario serate, prenotazione a step (data, persone, menu, pagamento), conferma automatica via email e una dashboard completa per gestire il tutto in autonomia.",
-    url: "https://www.danorasud.it",
+    url: "https://www.danordasud.it",
     immagine: "/images/danordasud.png",
     tecnologie: [
       "Sito personalizzato",
