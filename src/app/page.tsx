@@ -378,7 +378,7 @@ export default function Home() {
                 src="/images/doppiouno.png"
                 alt="Screenshot del sito Doppio Uno — ludoteca e associazione ludica"
                 fill
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                className="object-contain transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />
