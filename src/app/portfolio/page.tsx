@@ -1,6 +1,7 @@
 // Pagina portfolio — progetti realizzati per clienti reali
 
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
@@ -36,6 +37,7 @@ const progetti = [
     soluzione:
       "Una web app con catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala e una dashboard admin completa con gestione ruoli e permessi per lo staff.",
     url: "https://www.doppiouno.it",
+    immagine: "/images/doppiouno.png",
     tecnologie: [
       "Web app personalizzata",
       "Catalogo giochi",
@@ -56,6 +58,7 @@ const progetti = [
     soluzione:
       "Un sito con calendario serate, prenotazione a step (data, persone, menu, pagamento), conferma automatica via email e una dashboard completa per gestire il tutto in autonomia.",
     url: "https://www.danorasud.it",
+    immagine: null,
     tecnologie: [
       "Sito personalizzato",
       "Prenotazione online",
@@ -108,14 +111,24 @@ export default function Portfolio() {
               key={progetto.id}
               className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl"
             >
-              {/* Screenshot con gradiente decorativo */}
+              {/* Screenshot */}
               <div
                 className={`relative aspect-video overflow-hidden bg-gradient-to-br ${progetto.colore} md:aspect-[21/9]`}
               >
-                <div className="flex h-full items-center justify-center text-muted">
-                  Screenshot {progetto.nome}
-                </div>
-                {/* Overlay decorativo al hover */}
+                {progetto.immagine ? (
+                  <Image
+                    src={progetto.immagine}
+                    alt={`Screenshot del sito ${progetto.nome}`}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 1152px"
+                    priority={i === 0}
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center text-muted">
+                    Screenshot {progetto.nome}
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-foreground/0 transition-colors duration-500 group-hover:bg-foreground/5" />
               </div>
 
