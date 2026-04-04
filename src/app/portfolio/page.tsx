@@ -58,7 +58,7 @@ const progetti = [
     soluzione:
       "Un sito con calendario serate, prenotazione a step (data, persone, menu, pagamento), conferma automatica via email e una dashboard completa per gestire il tutto in autonomia.",
     url: "https://www.danorasud.it",
-    immagine: null,
+    immagine: "/images/danordasud.png",
     tecnologie: [
       "Sito personalizzato",
       "Prenotazione online",

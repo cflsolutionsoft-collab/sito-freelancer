@@ -401,10 +401,14 @@ export default function Home() {
             href="/portfolio"
             className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
-              <div className="flex h-full items-center justify-center text-sm text-muted">
-                Screenshot danorasud.it
-              </div>
+            <div className="relative aspect-video overflow-hidden">
+              <Image
+                src="/images/danordasud.png"
+                alt="Screenshot del sito Danorasud — home restaurant a Rivarolo Canavese"
+                fill
+                className="object-contain transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
               <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />
             </div>
             <div className="p-6">
