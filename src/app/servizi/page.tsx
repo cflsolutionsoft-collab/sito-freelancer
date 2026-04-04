@@ -108,31 +108,36 @@ const pacchetti = [
   },
 ];
 
-const confrontoWix = [
+const confronto = [
   {
     aspetto: "Velocità",
-    wix: "Siti spesso lenti, penalizzati su Google",
+    template: "Siti spesso lenti, penalizzati su Google",
     suMisura: "Siti ultra-veloci, premiati da Google nei risultati di ricerca",
   },
   {
     aspetto: "SEO",
-    wix: "Limitato dai vincoli della piattaforma",
+    template: "Limitato dai vincoli della piattaforma",
     suMisura: "Codice ottimizzato per il massimo posizionamento locale",
   },
   {
     aspetto: "Personalizzazione",
-    wix: "Vincolato ai template disponibili",
+    template: "Vincolato ai template disponibili",
     suMisura: "Costruito esattamente come serve alla tua attività",
   },
   {
     aspetto: "Proprietà",
-    wix: "Dipende dall'abbonamento alla piattaforma",
+    template: "Dipende dall'abbonamento alla piattaforma",
     suMisura: "Il sito è tuo, per sempre, senza vincoli",
   },
   {
     aspetto: "Assistenza",
-    wix: "Chatbot e ticket di supporto generico",
+    template: "Chatbot e ticket di supporto generico",
     suMisura: "Parli direttamente con me, referente unico",
+  },
+  {
+    aspetto: "Costo in 3 anni",
+    template: "€900+ di abbonamento, senza proprietà",
+    suMisura: "€740 tutto incluso, il sito resta tuo",
   },
 ];
 
@@ -262,7 +267,7 @@ export default function Servizi() {
         </div>
       </SectionWrapper>
 
-      {/* Confronto con Wix */}
+      {/* Confronto con piattaforme fai-da-te */}
       <SectionWrapper background="gradient">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
@@ -273,8 +278,8 @@ export default function Servizi() {
             <span className="font-display italic">fai-da-te?</span>
           </h2>
           <p className="mt-3 text-lg text-muted">
-            Con Wix hai un sito. Con me hai uno strumento che lavora per portarti
-            clienti.
+            Con una piattaforma a template hai un sito. Con me hai uno strumento
+            che lavora per portarti clienti.
           </p>
         </div>
         <div className="mt-12 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
@@ -283,7 +288,7 @@ export default function Servizi() {
               <tr className="border-b border-border bg-surface">
                 <th className="p-4 font-semibold"></th>
                 <th className="p-4 font-semibold text-muted">
-                  Wix / Squarespace
+                  Piattaforme fai-da-te
                 </th>
                 <th className="p-4 font-semibold text-primary">
                   Sito su misura
@@ -291,7 +296,7 @@ export default function Servizi() {
               </tr>
             </thead>
             <tbody>
-              {confrontoWix.map((riga) => (
+              {confronto.map((riga) => (
                 <tr
                   key={riga.aspetto}
                   className="border-b border-border last:border-0"
@@ -301,7 +306,7 @@ export default function Servizi() {
                     <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-red-100">
                       <X size={12} className="text-red-500" />
                     </span>
-                    {riga.wix}
+                    {riga.template}
                   </td>
                   <td className="p-4">
                     <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-green-100">

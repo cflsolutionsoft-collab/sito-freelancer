@@ -11,6 +11,9 @@ import {
   CalendarCheck,
   ShoppingBag,
   Sparkles,
+  Clock,
+  TrendingUp,
+  Calculator,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
@@ -22,6 +25,57 @@ import {
 } from "@/lib/schema";
 
 // === DATI SEZIONI ===
+
+const vantaggi = [
+  {
+    icon: Clock,
+    titolo: "Si carica in meno di 1 secondo",
+    numero: "0.8s",
+    confronto: "4-6s",
+    descrizione:
+      "Il 53% degli utenti abbandona un sito se non si carica entro 3 secondi. I siti a template sono appesantiti da codice inutile. I miei si caricano in meno di un secondo.",
+  },
+  {
+    icon: TrendingUp,
+    titolo: "Ti trovano su Google, davvero",
+    numero: "+70%",
+    confronto: "visibilità",
+    descrizione:
+      "Google premia i siti veloci, con codice pulito e struttura corretta. Un sito a template ha la stessa struttura di migliaia di altri — il tuo non ha motivo di emergere.",
+  },
+  {
+    icon: Shield,
+    titolo: "Il sito è tuo. Per sempre.",
+    numero: "€0",
+    confronto: "abbonamento",
+    descrizione:
+      "Con le piattaforme fai-da-te paghi un abbonamento mensile e se smetti di pagare perdi tutto. Il sito che costruisco è di tua proprietà, senza vincoli.",
+  },
+  {
+    icon: Calculator,
+    titolo: "Costa meno di quello che pensi",
+    numero: "€740",
+    confronto: "vs €900+",
+    descrizione:
+      "Un builder online costa €25/mese: in 3 anni sono oltre €900 e non possiedi nulla. Un sito su misura da €500 + manutenzione dal 2° anno costa €740 in 3 anni — e il sito resta tuo.",
+  },
+  {
+    icon: User,
+    titolo: "Parli con me, non con un chatbot",
+    numero: "24h",
+    confronto: "risposta",
+    descrizione:
+      "Hai bisogno di cambiare un orario sul sito? Mi mandi un messaggio e lo faccio io. Nessun ticket, nessuna attesa, nessun pannello da imparare.",
+  },
+  {
+    icon: Zap,
+    titolo: "Cresce con la tua attività",
+    numero: "∞",
+    confronto: "possibilità",
+    descrizione:
+      "Parti con un sito vetrina, poi aggiungi prenotazioni o e-commerce quando servono. Con un builder sei vincolato ai limiti della piattaforma.",
+  },
+];
 
 const problemi = [
   {
@@ -71,33 +125,6 @@ const servizi = [
   },
 ];
 
-const vantaggi = [
-  {
-    icon: Zap,
-    titolo: "Velocità reale",
-    descrizione:
-      "I siti che costruisco sono significativamente più veloci di quelli fatti con Wix o WordPress. Google premia la velocità con più visibilità.",
-  },
-  {
-    icon: Search,
-    titolo: "Trovi più clienti su Google",
-    descrizione:
-      "Codice pulito e struttura ottimizzata per il posizionamento nelle ricerche locali a Torino.",
-  },
-  {
-    icon: Shield,
-    titolo: "Il sito è tuo",
-    descrizione:
-      "Nessun abbonamento a piattaforme. Il sito ti appartiene e non dipende da servizi di terze parti.",
-  },
-  {
-    icon: User,
-    titolo: "Parli con me, non con un call center",
-    descrizione:
-      "Un referente unico che conosce il tuo progetto. Risposte rapide, senza ticket o tempi d'attesa.",
-  },
-];
-
 // === COMPONENTE PAGINA ===
 
 export default function Home() {
@@ -112,9 +139,8 @@ export default function Home() {
         ])}
       />
 
-      {/* Hero con gradient mesh e elementi decorativi */}
+      {/* Hero */}
       <section className="gradient-mesh relative overflow-hidden px-4 pb-16 pt-16 sm:px-6 md:pb-24 md:pt-24 lg:px-8">
-        {/* Decorazioni geometriche */}
         <div className="absolute right-0 top-0 h-72 w-72 opacity-[0.07]">
           <div className="dot-grid h-full w-full" />
         </div>
@@ -123,7 +149,6 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl text-center">
-            {/* Badge */}
             <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-light px-4 py-1.5 text-sm font-medium text-primary">
               <Sparkles size={14} />
               Web Designer Freelance — Torino
@@ -152,8 +177,90 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Problema / Soluzione */}
+      {/* Perché un sito su misura — SECONDA SEZIONE, risponde subito all'obiezione */}
       <SectionWrapper background="surface">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+            Pensavi di fartelo da solo?
+          </p>
+          <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
+            Perché un sito su misura batte{" "}
+            <span className="font-display italic">qualsiasi template</span>
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
+            Le piattaforme fai-da-te sembrano convenienti, ma alla lunga costano
+            di più e rendono di meno. Ecco i numeri.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {vantaggi.map((vantaggio, i) => (
+            <div
+              key={vantaggio.titolo}
+              className={`animate-fade-in-up group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                i === 0
+                  ? ""
+                  : i === 1
+                    ? "delay-100"
+                    : i === 2
+                      ? "delay-200"
+                      : i === 3
+                        ? "delay-100"
+                        : i === 4
+                          ? "delay-200"
+                          : "delay-300"
+              }`}
+            >
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
+                  <vantaggio.icon size={20} />
+                </div>
+                <div className="text-right">
+                  <span className="text-2xl font-bold text-primary">
+                    {vantaggio.numero}
+                  </span>
+                  <p className="text-xs text-muted">{vantaggio.confronto}</p>
+                </div>
+              </div>
+              <h3 className="font-semibold">{vantaggio.titolo}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {vantaggio.descrizione}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Confronto economico sintetico */}
+        <div className="mx-auto mt-12 max-w-2xl overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+          <div className="grid grid-cols-2">
+            <div className="border-r border-border p-6 text-center">
+              <p className="text-sm font-semibold text-muted">
+                Piattaforma fai-da-te
+              </p>
+              <p className="mt-1 text-sm text-muted">costo in 3 anni</p>
+              <p className="mt-2 text-3xl font-bold text-foreground/60">
+                €900+
+              </p>
+              <p className="mt-1 text-xs text-muted">
+                e il sito non è tuo
+              </p>
+            </div>
+            <div className="bg-primary-light p-6 text-center">
+              <p className="text-sm font-semibold text-primary">
+                Sito su misura
+              </p>
+              <p className="mt-1 text-sm text-muted">costo in 3 anni</p>
+              <p className="mt-2 text-3xl font-bold text-primary">€740</p>
+              <p className="mt-1 text-xs text-primary/70">
+                e il sito è tuo per sempre
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Problema / Soluzione */}
+      <SectionWrapper background="gradient">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Ti suona familiare?
@@ -187,7 +294,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* Servizi preview */}
-      <SectionWrapper background="gradient">
+      <SectionWrapper>
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Cosa posso fare per te
@@ -218,7 +325,9 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold">{servizio.nome}</h3>
               <p className="mt-1 text-2xl font-bold">
-                <span className="text-sm font-normal text-muted">a partire da </span>
+                <span className="text-sm font-normal text-muted">
+                  a partire da{" "}
+                </span>
                 <span className="text-primary">€{servizio.prezzo}</span>
               </p>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
@@ -259,13 +368,11 @@ export default function Home() {
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {/* Progetto 1 — Danorasud */}
           <a
             href="/portfolio"
             className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
-              {/* Placeholder per screenshot */}
               <div className="flex h-full items-center justify-center text-sm text-muted">
                 Screenshot danorasud.it
               </div>
@@ -279,18 +386,17 @@ export default function Home() {
                 Danorasud — Sito chiesa
               </h3>
               <p className="mt-1 text-sm text-muted">
-                Sito vetrina moderno e responsive per una comunità religiosa locale.
+                Sito vetrina moderno e responsive per una comunità religiosa
+                locale.
               </p>
             </div>
           </a>
 
-          {/* Progetto 2 — Doppio Uno Ludoteca */}
           <a
             href="/portfolio"
             className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
-              {/* Placeholder per screenshot */}
               <div className="flex h-full items-center justify-center text-sm text-muted">
                 Screenshot doppiounoludoteca.it
               </div>
@@ -316,49 +422,9 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* Blocco fiducia — Perché scegliere me */}
-      <SectionWrapper background="gradient">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-              Perché un sito su misura
-            </p>
-            <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
-              Con Wix hai un sito.<br />
-              Con me hai uno{" "}
-              <span className="font-display italic text-primary">strumento</span>{" "}
-              che lavora per te.
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted">
-              Un sito costruito su misura non è solo più bello — è più veloce,
-              si posiziona meglio su Google e ti appartiene davvero.
-            </p>
-          </div>
-          <div className="space-y-6">
-            {vantaggi.map((vantaggio) => (
-              <div
-                key={vantaggio.titolo}
-                className="group flex gap-4 rounded-xl border border-border bg-card p-5 shadow-sm transition-all duration-300 hover:border-primary/20 hover:shadow-md"
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-sm">
-                  <vantaggio.icon size={20} />
-                </div>
-                <div>
-                  <h3 className="font-semibold">{vantaggio.titolo}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">
-                    {vantaggio.descrizione}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
-
       {/* CTA finale */}
       <SectionWrapper>
         <div className="relative overflow-hidden rounded-3xl bg-foreground px-6 py-14 text-center text-white sm:px-12 sm:py-20">
-          {/* Decorazioni */}
           <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
           <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-accent/15 blur-3xl" />
           <div className="absolute right-8 top-8 h-20 w-20 rounded-full border border-white/10 md:h-32 md:w-32" />
@@ -373,11 +439,7 @@ export default function Home() {
               senza impegno.
             </p>
             <div className="mt-10">
-              <Button
-                href="/contatti"
-                size="lg"
-                variant="accent"
-              >
+              <Button href="/contatti" size="lg" variant="accent">
                 Scrivimi ora <ArrowRight size={18} />
               </Button>
             </div>
