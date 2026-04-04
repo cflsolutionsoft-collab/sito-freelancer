@@ -65,7 +65,7 @@ const vantaggi = [
     numero: "1:1",
     confronto: "dedicato",
     descrizione:
-      "Ci incontriamo, ascolto le tue esigenze e costruisco il sito su misura per te. Alla consegna hai anche una dashboard semplice per aggiornare orari, foto e contenuti in autonomia.",
+      "Ci incontriamo, ascolto le tue esigenze e costruisco il sito su misura per te. Alla consegna hai anche una dashboard semplice per gestire il sito in autonomia.",
   },
   {
     icon: Zap,
