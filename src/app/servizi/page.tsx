@@ -140,7 +140,7 @@ const confronto = [
   {
     aspetto: "Costo in 3 anni",
     template: "€900+ di abbonamento, senza proprietà",
-    suMisura: "€740 tutto incluso, il sito resta tuo",
+    suMisura: "Da €500 (sito) fino a €860 con manutenzione, il sito resta tuo",
   },
 ];
 
@@ -530,11 +530,14 @@ export default function Servizi() {
                 Dal secondo anno
               </p>
               <p className="mt-1 text-3xl font-bold">
-                €20
+                <span className="text-sm font-normal text-muted">
+                  a partire da{" "}
+                </span>
+                €15
                 <span className="text-lg font-normal text-muted">/mese</span>
               </p>
               <p className="mt-1 text-sm text-muted">
-                Rinnovabile liberamente
+                Opzionale e senza obbligo
               </p>
               <ul className="mt-4 space-y-2 text-sm">
                 <li className="flex items-start gap-2">
@@ -549,14 +552,14 @@ export default function Servizi() {
                     size={16}
                     className="mt-0.5 shrink-0 text-primary"
                   />
-                  Nessun vincolo, disdici quando vuoi
+                  Puoi attivarla, saltarla o disdirla quando vuoi
                 </li>
                 <li className="flex items-start gap-2">
                   <Check
                     size={16}
                     className="mt-0.5 shrink-0 text-primary"
                   />
-                  Il sito resta tuo anche se non rinnovi
+                  Il sito resta tuo anche se non la attivi
                 </li>
               </ul>
             </div>

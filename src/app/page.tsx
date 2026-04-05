@@ -55,10 +55,10 @@ const vantaggi = [
   {
     icon: Calculator,
     titolo: "Costa meno di quello che pensi",
-    numero: "€740",
+    numero: "€860",
     confronto: "vs €900+",
     descrizione:
-      "Un builder online costa €25/mese: in 3 anni sono oltre €900 e non possiedi nulla. Un sito su misura da €500 + manutenzione dal 2° anno costa €740 in 3 anni — e il sito resta tuo.",
+      "Un builder online costa €25/mese: in 3 anni sono oltre €900 e non possiedi nulla. Un sito su misura da €500 + manutenzione opzionale a €15/mese costa al massimo €860 in 3 anni — e il sito resta tuo.",
   },
   {
     icon: User,
@@ -253,7 +253,7 @@ export default function Home() {
                 Sito su misura
               </p>
               <p className="mt-1 text-sm text-muted">costo in 3 anni</p>
-              <p className="mt-2 text-3xl font-bold text-primary">€740</p>
+              <p className="mt-2 text-3xl font-bold text-primary">€860</p>
               <p className="mt-1 text-xs text-primary/70">
                 e il sito è tuo per sempre
               </p>
