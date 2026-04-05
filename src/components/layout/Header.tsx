@@ -3,7 +3,6 @@
 // Header con navigazione responsive, menu mobile e stile editoriale
 
 import { useState } from "react";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
 
@@ -22,14 +21,12 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo con font serif */}
         <a href="/" className="group flex items-center gap-2">
-          <Image
-            src="/images/logo.webp"
-            alt="Fabio Regnaud — Web Designer Freelance"
-            width={600}
-            height={173}
-            className="h-10 w-auto sm:h-12"
-            priority
-          />
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white">
+            FR
+          </span>
+          <span className="font-display text-xl italic text-foreground transition-colors group-hover:text-primary">
+            Fabio Regnaud
+          </span>
         </a>
 
         {/* Navigazione desktop */}
