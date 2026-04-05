@@ -27,7 +27,7 @@ export default function Header() {
             alt="Fabio Regnaud — Web Designer Freelance"
             width={160}
             height={160}
-            className="h-9 w-auto"
+            className="h-full max-h-14 w-auto"
             priority
           />
         </a>
