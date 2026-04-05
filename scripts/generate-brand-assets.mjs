@@ -17,12 +17,13 @@ if (!existsSync(LOGO_PATH)) {
   process.exit(1);
 }
 
-// 1. Logo completo in WebP ottimizzato
+// 1. Logo completo in WebP ottimizzato (croppato dallo spazio bianco)
 await sharp(LOGO_PATH)
-  .resize(800, 800)
+  .trim()
+  .resize(600, null, { withoutEnlargement: true })
   .webp({ quality: 85, effort: 6 })
   .toFile("public/images/logo.webp");
-console.log("✓ public/images/logo.webp (800×800)");
+console.log("✓ public/images/logo.webp (croppato e ottimizzato)");
 
 // 2. Croppo solo il marchio "FR" (parte sinistra del logo 2000×2000)
 //    Il marchio occupa circa il 42% sinistro, centrato verticalmente

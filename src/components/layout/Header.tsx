@@ -25,9 +25,9 @@ export default function Header() {
           <Image
             src="/images/logo.webp"
             alt="Fabio Regnaud — Web Designer Freelance"
-            width={160}
-            height={160}
-            className="h-full max-h-14 w-auto"
+            width={600}
+            height={173}
+            className="h-10 w-auto sm:h-12"
             priority
           />
         </a>
