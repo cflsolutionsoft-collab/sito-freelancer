@@ -10,6 +10,7 @@ import {
   ArrowRight,
   ChevronDown,
   Wrench,
+  Search,
   X,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -67,8 +68,9 @@ const pacchetti = [
     include: [
       "Tutto del pacchetto Sito Vetrina",
       "Calendario prenotazioni con disponibilità in tempo reale",
-      "Notifiche automatiche al titolare e al cliente",
-      "Pagamento anticipato opzionale per ridurre i no-show",
+      "Email di conferma automatica per te e per il cliente",
+      "Promemoria automatici per ridurre i no-show",
+      "Pagamento anticipato opzionale",
       "Pannello semplice per gestire le prenotazioni",
     ],
   },
@@ -83,7 +85,8 @@ const pacchetti = [
     include: [
       "Sito con catalogo prodotti",
       "Pagamenti sicuri: carta, Apple Pay, Google Pay",
-      "Gestione ordini e notifiche automatiche",
+      "Email automatiche di conferma ordine al cliente",
+      "Notifiche immediate a te quando arriva un ordine",
       "Pannello di amministrazione semplice",
       "Hosting e dominio personalizzato",
       "Manutenzione gratuita il primo anno",
@@ -243,7 +246,7 @@ export default function Servizi() {
               step: "04",
               titolo: "Consegna e autonomia",
               descrizione:
-                "Il sito va online con una dashboard personalizzata per gestirlo in autonomia. Ti faccio vedere come funziona tutto. E dopo la consegna resto il tuo riferimento — il primo anno di manutenzione è incluso.",
+                "Il sito va online con una dashboard personalizzata per gestirlo in autonomia. Ma non è un sito statico: lavora per te in automatico — invia email di conferma, manda notifiche quando serve, raccoglie contatti anche mentre dormi. Il primo anno di manutenzione è incluso.",
             },
           ].map((item, i) => (
             <div
@@ -330,8 +333,65 @@ export default function Servizi() {
         </div>
       </SectionWrapper>
 
-      {/* Confronto con piattaforme fai-da-te */}
+      {/* Visibilità su Google — inclusa */}
       <SectionWrapper background="gradient">
+        <div className="mx-auto max-w-3xl">
+          <div className="text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20">
+              <Search size={24} />
+            </div>
+            <h2 className="text-3xl font-bold sm:text-4xl">
+              Visibilità su Google?{" "}
+              <span className="font-display italic">Già inclusa.</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
+              Molti web designer ti fanno pagare la visibilità su Google come
+              servizio extra. Io la includo in ogni sito, senza costi
+              aggiuntivi.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <h3 className="font-semibold">Cosa significa in pratica?</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                Quando qualcuno a Torino cerca su Google un servizio come il
+                tuo (ad esempio &quot;parrucchiere Torino&quot; o &quot;ristorante
+                Rivarolo&quot;), il tuo sito è costruito per comparire tra i
+                primi risultati. Non è magia — è struttura, velocità e
+                contenuti fatti bene.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <h3 className="font-semibold">Cosa è incluso in ogni sito?</h3>
+              <ul className="mt-2 space-y-2 text-sm text-muted">
+                <li className="flex items-start gap-2">
+                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                  Il tuo sito compare nelle ricerche locali a Torino
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                  Pagine scritte per farsi trovare dai tuoi clienti
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                  Sito veloce — Google premia i siti che si caricano subito
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                  Funziona perfettamente da telefono (dove avviene il 70% delle ricerche)
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                  Il tuo sito viene registrato su Google automaticamente
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Confronto con piattaforme fai-da-te */}
+      <SectionWrapper>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Il confronto

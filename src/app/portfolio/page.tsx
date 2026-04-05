@@ -52,11 +52,11 @@ const progetti = [
     nome: "Danorasud",
     tipo: "Vetrina + prenotazioni + pagamenti",
     descrizione:
-      "Piattaforma completa per un home restaurant a Rivarolo Canavese. I clienti possono consultare il calendario delle serate, prenotare il proprio posto attraverso un flusso guidato e pagare direttamente online. Lo chef gestisce serate, menu e prenotazioni da una dashboard dedicata.",
+      "Piattaforma completa per un home restaurant a Rivarolo Canavese. I clienti consultano il calendario delle serate, prenotano il proprio posto con un flusso guidato e pagano direttamente online. Il sito lavora in automatico: invia email di conferma ai clienti, notifica lo chef ad ogni nuova prenotazione e aggiorna la disponibilità in tempo reale. Lo chef gestisce tutto da una dashboard dedicata.",
     problema:
-      "Il ristorante gestiva le prenotazioni manualmente via telefono e messaggi, con il rischio di overbooking e nessun sistema per raccogliere i pagamenti in anticipo.",
+      "Il ristorante gestiva le prenotazioni manualmente via telefono e messaggi, con il rischio di overbooking, nessun sistema per raccogliere i pagamenti in anticipo e troppo tempo perso a rispondere a richieste fuori orario.",
     soluzione:
-      "Un sito con calendario serate, prenotazione a step (data, persone, menu, pagamento), conferma automatica via email e una dashboard completa per gestire il tutto in autonomia.",
+      "Un sito con calendario serate, prenotazione a step (data, persone, menu, pagamento) e un sistema di automazioni che fa tutto il lavoro operativo: email di conferma, notifiche, ricevute, aggiornamento disponibilità. Lo chef si concentra solo sulla cucina.",
     url: "https://www.danordasud.it",
     immagine: "/images/danordasud.png",
     tecnologie: [

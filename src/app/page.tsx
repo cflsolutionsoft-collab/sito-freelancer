@@ -339,7 +339,7 @@ export default function Home() {
               step: "04",
               titolo: "Consegna",
               descrizione:
-                "Il sito va online con una dashboard per gestirlo in autonomia. Ti seguo anche dopo.",
+                "Il sito va online con una dashboard per gestirlo e lavora in automatico anche quando tu non ci sei.",
             },
           ].map((item, i) => (
             <div
