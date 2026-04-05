@@ -37,7 +37,7 @@ const progetti = [
     soluzione:
       "Una web app con catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala e una dashboard admin completa con gestione ruoli e permessi per lo staff.",
     url: "https://www.doppiouno.it",
-    immagine: "/images/doppiouno.png",
+    immagine: "/images/doppiouno.webp",
     tecnologie: [
       "Web app personalizzata",
       "Catalogo giochi",
@@ -58,7 +58,7 @@ const progetti = [
     soluzione:
       "Un sito con calendario serate, prenotazione a step (data, persone, menu, pagamento) e un sistema di automazioni che fa tutto il lavoro operativo: email di conferma, notifiche, ricevute, aggiornamento disponibilità. Lo chef si concentra solo sulla cucina.",
     url: "https://www.danordasud.it",
-    immagine: "/images/danordasud.png",
+    immagine: "/images/danordasud.webp",
     tecnologie: [
       "Sito personalizzato",
       "Prenotazione online",

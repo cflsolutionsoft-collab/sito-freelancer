@@ -52,6 +52,14 @@ export const metadata: Metadata = {
     title: "Fabio Regnaud — Web Designer Freelance a Torino",
     description:
       "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+    images: [
+      {
+        url: `${SITE_URL}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Fabio Regnaud — Web Designer Freelance a Torino",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

@@ -440,7 +440,7 @@ export default function Home() {
           >
             <div className="relative aspect-video overflow-hidden">
               <Image
-                src="/images/doppiouno.png"
+                src="/images/doppiouno.webp"
                 alt="Screenshot del sito Doppio Uno — ludoteca e associazione ludica"
                 fill
                 className="object-contain transition-transform duration-500 group-hover:scale-105"
@@ -468,7 +468,7 @@ export default function Home() {
           >
             <div className="relative aspect-video overflow-hidden">
               <Image
-                src="/images/danordasud.png"
+                src="/images/danordasud.webp"
                 alt="Screenshot del sito Danorasud — home restaurant a Rivarolo Canavese"
                 fill
                 className="object-contain transition-transform duration-500 group-hover:scale-105"

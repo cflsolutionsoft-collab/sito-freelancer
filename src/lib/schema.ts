@@ -15,9 +15,8 @@ export function professionalServiceSchema() {
     description:
       "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
     url: SITE_URL,
-    // TODO: aggiungere logo e immagine quando disponibili
-    // logo: `${SITE_URL}/images/logo.png`,
-    // image: `${SITE_URL}/images/og-image.jpg`,
+    logo: `${SITE_URL}/images/logo.webp`,
+    image: `${SITE_URL}/og-image.jpg`,
     priceRange: "€€",
     areaServed: {
       "@type": "City",
