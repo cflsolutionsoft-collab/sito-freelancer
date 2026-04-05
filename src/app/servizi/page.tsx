@@ -51,7 +51,7 @@ const pacchetti = [
       "Ottimizzazione SEO per le ricerche locali",
       "Form di contatto funzionante",
       "Pulsante WhatsApp integrato",
-      "Hosting e dominio personalizzato",
+      "Pubblicazione online inclusa — tutti gli account intestati a te",
       "Manutenzione gratuita il primo anno",
     ],
   },
@@ -88,7 +88,7 @@ const pacchetti = [
       "Email automatiche di conferma ordine al cliente",
       "Notifiche immediate a te quando arriva un ordine",
       "Pannello di amministrazione semplice",
-      "Hosting e dominio personalizzato",
+      "Pubblicazione online inclusa — tutti gli account intestati a te",
       "Manutenzione gratuita il primo anno",
     ],
   },
@@ -159,6 +159,11 @@ const faq = [
     domanda: "Posso aggiornare il sito da solo?",
     risposta:
       "Le modifiche ordinarie (testi, foto, orari) sono incluse nel piano di manutenzione — me le chiedi e le faccio io entro 48-72 ore. Così non devi preoccuparti di nulla.",
+  },
+  {
+    domanda: "Di chi sono il dominio e gli account tecnici?",
+    risposta:
+      "Tutto è intestato a te, dall'inizio alla fine. All'inizio del progetto ti guido nella creazione di un'email dedicata e degli account tecnici necessari (Firebase, Stripe, Resend, ecc.). Alla consegna hai tutti gli accessi — nessuna dipendenza da me. Il codice del sito è pubblicato gratuitamente su Vercel attraverso il mio account, ma se un giorno vuoi cambiare fornitore sei libero di farlo senza ostacoli.",
   },
   {
     domanda: "Cosa succede se non rinnovo la manutenzione?",
