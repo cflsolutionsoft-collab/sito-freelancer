@@ -171,12 +171,12 @@ const faq = [
   {
     domanda: "Quanto tempo ci vuole per avere il sito pronto?",
     risposta:
-      "Un sito vetrina richiede in media 2-3 settimane. Un sito con prenotazioni o e-commerce 3-4 settimane. I tempi dipendono anche dalla velocità con cui mi fornisci testi e immagini.",
+      "Un sito vetrina richiede in media 2-3 settimane. Un sito con prenotazioni o e-commerce 3-4 settimane. I tempi dipendono anche dalla velocità con cui definiamo insieme i contenuti nel briefing iniziale.",
   },
   {
     domanda: "Cosa devo preparare io?",
     risposta:
-      "Testi, foto della tua attività e il logo. Se non hai tutto pronto, ti guido io su cosa serve e come ottenerlo. Non devi essere tecnico per lavorare con me.",
+      "Nulla di specifico. Durante il briefing iniziale mi racconti chi sei, cosa fai e quali sono i tuoi obiettivi — al resto ci penso io. I testi del sito li scrivo io partendo da quello che mi dici, e se hai già foto della tua attività o un logo li usiamo, altrimenti troviamo insieme la soluzione migliore. Non devi essere tecnico, non devi preparare documenti, non devi scrivere niente da solo.",
   },
   {
     domanda: "Posso aggiornare il sito da solo?",
