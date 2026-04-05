@@ -54,11 +54,11 @@ const vantaggi = [
   },
   {
     icon: Calculator,
-    titolo: "Costa meno di quello che pensi",
-    numero: "€860",
-    confronto: "vs €900+",
+    titolo: "Molto di più di un abbonamento",
+    numero: "10×",
+    confronto: "valore",
     descrizione:
-      "Un builder online costa €25/mese: in 3 anni sono oltre €900 e non possiedi nulla. Un sito su misura da €500 + manutenzione opzionale a €15/mese costa al massimo €860 in 3 anni — e il sito resta tuo.",
+      "Con una piattaforma fai-da-te paghi per avere accesso a uno strumento — il sito lo costruisci tu. Con me paghi una volta e ricevi un sito finito, con consulenza, testi e dashboard incluse.",
   },
   {
     icon: User,
@@ -233,33 +233,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Confronto economico sintetico */}
-        <div className="mx-auto mt-12 max-w-2xl overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-          <div className="grid grid-cols-2">
-            <div className="border-r border-border p-6 text-center">
-              <p className="text-sm font-semibold text-muted">
-                Piattaforma fai-da-te
-              </p>
-              <p className="mt-1 text-sm text-muted">costo in 3 anni</p>
-              <p className="mt-2 text-3xl font-bold text-foreground/60">
-                €900+
-              </p>
-              <p className="mt-1 text-xs text-muted">
-                e il sito non è tuo
-              </p>
-            </div>
-            <div className="bg-primary-light p-6 text-center">
-              <p className="text-sm font-semibold text-primary">
-                Sito su misura
-              </p>
-              <p className="mt-1 text-sm text-muted">costo in 3 anni</p>
-              <p className="mt-2 text-3xl font-bold text-primary">€860</p>
-              <p className="mt-1 text-xs text-primary/70">
-                e il sito è tuo per sempre
-              </p>
-            </div>
-          </div>
-        </div>
       </SectionWrapper>
 
       {/* Problema / Soluzione */}

@@ -137,10 +137,33 @@ const confronto = [
     template: "Chatbot e ticket di supporto generico",
     suMisura: "Parli direttamente con me, referente unico",
   },
+];
+
+const cosaOttieni = [
   {
-    aspetto: "Costo in 3 anni",
-    template: "€900+ di abbonamento, senza proprietà",
-    suMisura: "Da €500 (sito) fino a €860 con manutenzione, il sito resta tuo",
+    aspetto: "Cosa paghi",
+    template: "L'accesso a uno strumento per costruirti il sito da solo",
+    suMisura: "Un sito finito, consegnato e pronto a funzionare",
+  },
+  {
+    aspetto: "Testi e contenuti",
+    template: "Devi scriverli tu dall'inizio alla fine",
+    suMisura: "Ti aiuto io a definirli, partendo dal briefing",
+  },
+  {
+    aspetto: "Design",
+    template: "Template uguale a migliaia di altri siti",
+    suMisura: "Disegnato su misura per la tua attività",
+  },
+  {
+    aspetto: "Consulenza",
+    template: "Nessuna, devi capire tutto da solo",
+    suMisura: "Briefing di persona e affiancamento durante il progetto",
+  },
+  {
+    aspetto: "Gestione dopo il lancio",
+    template: "Ti arrangi col pannello della piattaforma",
+    suMisura: "Dashboard personalizzata + assistenza opzionale",
   },
 ];
 
@@ -438,6 +461,55 @@ export default function Servizi() {
             </thead>
             <tbody>
               {confronto.map((riga) => (
+                <tr
+                  key={riga.aspetto}
+                  className="border-b border-border last:border-0"
+                >
+                  <td className="p-4 font-medium">{riga.aspetto}</td>
+                  <td className="p-4 text-muted">
+                    <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-red-100">
+                      <X size={12} className="text-red-500" />
+                    </span>
+                    {riga.template}
+                  </td>
+                  <td className="p-4">
+                    <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-green-100">
+                      <Check size={12} className="text-green-600" />
+                    </span>
+                    {riga.suMisura}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Cosa ottieni davvero — confronto di valore */}
+        <div className="mx-auto mt-16 max-w-3xl text-center">
+          <h3 className="text-2xl font-bold sm:text-3xl">
+            Ma a parità di spesa, cosa{" "}
+            <span className="font-display italic">ottieni davvero?</span>
+          </h3>
+          <p className="mt-3 text-muted">
+            Una piattaforma fai-da-te ti dà uno strumento. Io ti consegno un
+            risultato finito.
+          </p>
+        </div>
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
+          <table className="w-full min-w-[600px] text-left text-sm">
+            <thead>
+              <tr className="border-b border-border bg-surface">
+                <th className="p-4 font-semibold"></th>
+                <th className="p-4 font-semibold text-muted">
+                  Piattaforme fai-da-te
+                </th>
+                <th className="p-4 font-semibold text-primary">
+                  Sito su misura
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {cosaOttieni.map((riga) => (
                 <tr
                   key={riga.aspetto}
                   className="border-b border-border last:border-0"
