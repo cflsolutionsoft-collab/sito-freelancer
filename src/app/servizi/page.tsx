@@ -392,6 +392,19 @@ export default function Servizi() {
               </ul>
             </div>
           </div>
+
+          {/* Spiegazione segnalazione Google */}
+          <div className="mx-auto mt-6 max-w-3xl rounded-2xl border border-primary/20 bg-primary-light/50 p-6">
+            <p className="text-sm leading-relaxed text-foreground">
+              <span className="font-semibold">Cosa significa segnalare il sito a Google?</span>{" "}
+              Dopo il lancio configuro insieme a te Google Search Console
+              (il pannello ufficiale di Google per i siti web) e ti aiuto a
+              impostare la scheda Google Business Profile, quella che compare
+              nelle ricerche locali con foto, orari e mappa. Così il tuo sito
+              viene notato da Google più rapidamente e inizia a comparire
+              nelle ricerche del tuo territorio.
+            </p>
+          </div>
         </div>
       </SectionWrapper>
 
