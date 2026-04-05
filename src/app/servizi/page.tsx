@@ -346,24 +346,24 @@ export default function Servizi() {
               <Search size={24} />
             </div>
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Visibilità su Google?{" "}
+              Ottimizzazione per Google?{" "}
               <span className="font-display italic">Già inclusa.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
-              Molti web designer ti fanno pagare la visibilità su Google come
-              servizio extra. Io la includo in ogni sito, senza costi
-              aggiuntivi.
+              Molti web designer ti fanno pagare l&apos;ottimizzazione per
+              Google come servizio extra. Io la includo in ogni sito, senza
+              costi aggiuntivi.
             </p>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <h3 className="font-semibold">Cosa significa in pratica?</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Quando qualcuno a Torino cerca su Google un servizio come il
-                tuo (ad esempio &quot;parrucchiere Torino&quot; o &quot;ristorante
-                Rivarolo&quot;), il tuo sito è costruito per comparire tra i
-                primi risultati. Non è magia — è struttura, velocità e
-                contenuti fatti bene.
+                Nessuno può promettere il primo posto su Google — chi lo fa
+                ti sta mentendo. Quello che posso fare è costruire il sito
+                nel modo giusto, così Google capisce subito di cosa parli e
+                ti considera tra i candidati quando qualcuno cerca un
+                servizio come il tuo.
               </p>
             </div>
             <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
@@ -371,11 +371,11 @@ export default function Servizi() {
               <ul className="mt-2 space-y-2 text-sm text-muted">
                 <li className="flex items-start gap-2">
                   <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                  Il tuo sito compare nelle ricerche locali a Torino
+                  Struttura tecnica che Google legge senza problemi
                 </li>
                 <li className="flex items-start gap-2">
                   <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                  Pagine scritte per farsi trovare dai tuoi clienti
+                  Testi scritti pensando a cosa cercano i tuoi clienti
                 </li>
                 <li className="flex items-start gap-2">
                   <Check size={16} className="mt-0.5 shrink-0 text-primary" />
@@ -387,7 +387,7 @@ export default function Servizi() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                  Il tuo sito viene registrato su Google automaticamente
+                  Segnalazione del sito a Google dopo il lancio
                 </li>
               </ul>
             </div>
