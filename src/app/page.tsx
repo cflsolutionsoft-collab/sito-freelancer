@@ -1,5 +1,6 @@
 // Home page — prima impressione per i potenziali clienti
 
+import type { Metadata } from "next";
 import Image from "next/image";
 import {
   Globe,
@@ -24,6 +25,25 @@ import {
   webSiteSchema,
   breadcrumbSchema,
 } from "@/lib/schema";
+
+// Metadata esplicito per la home: canonical dedicato e OG url coerente.
+// Il title usa `absolute` per evitare il template "%s — Fabio Regnaud" del layout.
+export const metadata: Metadata = {
+  title: {
+    absolute: "Fabio Regnaud — Web Designer Freelance a Torino",
+  },
+  description:
+    "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+  alternates: {
+    canonical: "https://fabioregnaud.it",
+  },
+  openGraph: {
+    title: "Fabio Regnaud — Web Designer Freelance a Torino",
+    description:
+      "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+    url: "https://fabioregnaud.it",
+  },
+};
 
 // === DATI SEZIONI ===
 

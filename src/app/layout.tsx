@@ -33,13 +33,6 @@ export const metadata: Metadata = {
   },
   description:
     "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
-  keywords: [
-    "web designer freelance Torino",
-    "sito web Torino",
-    "realizzazione siti web Torino",
-    "sito web piccole attività Torino",
-    "web designer economico Torino",
-  ],
   authors: [{ name: "Fabio Regnaud" }],
   creator: "Fabio Regnaud",
   robots: {
