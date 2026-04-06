@@ -31,17 +31,17 @@ import {
 // Il title usa `absolute` per evitare il template "%s — Fabio Regnaud" del layout.
 export const metadata: Metadata = {
   title: {
-    absolute: "Fabio Regnaud — Web Designer Freelance a Torino",
+    absolute: "Fabio Regnaud — Web Designer Freelance a Torino e in Canavese",
   },
   description:
-    "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+    "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese. Siti vetrina per ristoranti, parrucchieri, centri estetici e B&B. Sistemi di prenotazione ed e-commerce su misura.",
   alternates: {
     canonical: "https://fabioregnaud.it",
   },
   openGraph: {
-    title: "Fabio Regnaud — Web Designer Freelance a Torino",
+    title: "Fabio Regnaud — Web Designer Freelance a Torino e in Canavese",
     description:
-      "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+      "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese. Siti vetrina per ristoranti, parrucchieri, centri estetici e B&B. Sistemi di prenotazione ed e-commerce su misura.",
     url: "https://fabioregnaud.it",
   },
 };
@@ -126,7 +126,7 @@ const servizi = [
     nome: "Sito Vetrina",
     prezzo: "500",
     descrizione:
-      "La tua presenza online professionale. Sito veloce, ottimizzato per Google e pronto per ricevere contatti.",
+      "La tua presenza online professionale. Ideale per ristoranti, parrucchieri, artigiani e studi professionali. Veloce, ottimizzato per Google e pronto per ricevere contatti.",
     href: "/servizi#vetrina",
   },
   {
@@ -134,7 +134,7 @@ const servizi = [
     nome: "Sito + Prenotazioni",
     prezzo: "800",
     descrizione:
-      "Tutto del sito vetrina più un sistema di prenotazione online con calendario e notifiche automatiche.",
+      "Tutto del sito vetrina più un sistema di prenotazione online. Perfetto per centri estetici, parrucchieri, ristoranti e B&B che vivono di appuntamenti.",
     href: "/servizi#prenotazioni",
   },
   {
@@ -142,7 +142,7 @@ const servizi = [
     nome: "E-commerce",
     prezzo: "1.000",
     descrizione:
-      "Vendi i tuoi prodotti o servizi online con pagamenti sicuri tramite carta, Apple Pay e Google Pay.",
+      "Vendi i tuoi prodotti o servizi online con pagamenti sicuri. Per negozi locali e artigiani che vogliono vendere anche fuori dal Canavese.",
     href: "/servizi#ecommerce",
   },
 ];
@@ -174,7 +174,7 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-light px-4 py-1.5 text-sm font-medium text-primary">
               <Sparkles size={14} />
-              Web Designer Freelance — Torino
+              Web Designer Freelance — Torino e Canavese
             </div>
 
             <h1 className="animate-fade-in-up delay-100 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
@@ -185,8 +185,8 @@ export default function Home() {
 
             <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
               Realizzo siti web professionali, veloci e ottimizzati per Google.
-              Pensati per le piccole attività di Torino che vogliono farsi
-              trovare online dai propri clienti.
+              Pensati per le piccole attività di Torino e del Canavese che vogliono
+              farsi trovare online dai propri clienti.
             </p>
 
             <div className="animate-fade-in-up delay-300 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -214,7 +214,7 @@ export default function Home() {
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
             Le piattaforme fai-da-te sembrano convenienti, ma alla lunga costano
             di più e rendono di meno. Un sito web professionale per la tua
-            attività a Torino è un investimento che si ripaga.
+            attività a Torino o nel Canavese è un investimento che si ripaga.
           </p>
         </div>
 
@@ -432,7 +432,7 @@ export default function Home() {
             <span className="font-display italic">realizzati</span>
           </h2>
           <p className="mt-3 text-lg text-muted">
-            Siti web realizzati per attività locali a Torino e dintorni.
+            Siti web realizzati per attività locali a Torino e nel Canavese.
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
@@ -508,11 +508,13 @@ export default function Home() {
 
           <div className="relative">
             <h2 className="font-display text-4xl italic sm:text-5xl">
-              Hai un&apos;attività a Torino?
+              Hai un&apos;attività a Torino o nel Canavese?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
               Raccontami cosa fai e insieme creiamo il sito web perfetto per
-              la tua attività. La prima consulenza è gratuita e senza impegno.
+              la tua attività. Lavoro con ristoranti, parrucchieri, centri
+              estetici, B&amp;B e tante altre attività locali. La prima
+              consulenza è gratuita e senza impegno.
             </p>
             <div className="mt-10">
               <Button href="/contatti" size="lg" variant="accent">

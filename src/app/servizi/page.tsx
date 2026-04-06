@@ -21,14 +21,14 @@ import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Servizi",
   description:
-    "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino. Prezzi trasparenti a partire da €500.",
+    "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino e in Canavese. Prezzi trasparenti a partire da €500.",
   alternates: {
     canonical: "https://fabioregnaud.it/servizi",
   },
   openGraph: {
     title: "Servizi — Fabio Regnaud",
     description:
-      "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino. Prezzi trasparenti a partire da €500.",
+      "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino e in Canavese. Prezzi trasparenti a partire da €500.",
     url: "https://fabioregnaud.it/servizi",
   },
 };
@@ -225,7 +225,7 @@ export default function Servizi() {
           </p>
           <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
             Realizzazione siti web a{" "}
-            <span className="font-display italic text-primary">Torino</span>
+            <span className="font-display italic text-primary">Torino e in Canavese</span>
           </h1>
           <p className="mt-4 text-lg text-muted">
             Siti web professionali costruiti su misura per piccole attività
@@ -256,7 +256,7 @@ export default function Servizi() {
               step: "01",
               titolo: "Ascolto",
               descrizione:
-                "Ci incontriamo di persona a Torino. Capisco chi sei, cosa fa la tua attività, chi sono i tuoi clienti e quali obiettivi vuoi raggiungere con il sito. Nessun questionario online — una conversazione vera, davanti a un caffè.",
+                "Ci incontriamo di persona a Torino o nel Canavese. Capisco chi sei, cosa fa la tua attività, chi sono i tuoi clienti e quali obiettivi vuoi raggiungere con il sito. Nessun questionario online — una conversazione vera, davanti a un caffè.",
             },
             {
               step: "02",
@@ -685,7 +685,7 @@ export default function Servizi() {
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
               Scrivimi e ne parliamo insieme, senza impegno. Ti aiuto a
-              scegliere il sito web giusto per la tua attività a Torino.
+              scegliere il sito web giusto per la tua attività a Torino o nel Canavese.
             </p>
             <Button
               href="/contatti"

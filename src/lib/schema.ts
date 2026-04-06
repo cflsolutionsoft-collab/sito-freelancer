@@ -13,20 +13,42 @@ export function professionalServiceSchema() {
     "@id": `${SITE_URL}/#business`,
     name: "Fabio Regnaud — Web Designer Freelance",
     description:
-      "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+      "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese. Siti vetrina per ristoranti, parrucchieri, centri estetici e B&B. Sistemi di prenotazione ed e-commerce su misura.",
     url: SITE_URL,
     logo: `${SITE_URL}/images/logo.webp`,
     image: `${SITE_URL}/og-image.jpg`,
     email: "info@fabioregnaud.it",
     priceRange: "€€",
-    areaServed: {
-      "@type": "City",
-      name: "Torino",
-      containedInPlace: {
-        "@type": "AdministrativeArea",
-        name: "Piemonte",
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Torino",
+        containedInPlace: {
+          "@type": "AdministrativeArea",
+          name: "Piemonte",
+        },
       },
-    },
+      {
+        "@type": "AdministrativeArea",
+        name: "Canavese",
+        containedInPlace: {
+          "@type": "AdministrativeArea",
+          name: "Piemonte",
+        },
+      },
+      {
+        "@type": "City",
+        name: "Ivrea",
+      },
+      {
+        "@type": "City",
+        name: "Chivasso",
+      },
+      {
+        "@type": "City",
+        name: "Rivarolo Canavese",
+      },
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Torino",

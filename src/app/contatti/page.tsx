@@ -41,8 +41,9 @@ export default function Contatti() {
             <span className="font-display italic text-primary">progetto</span>
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Cerchi un web designer freelance a Torino? Scrivimi per raccontarmi
-            la tua idea. Rispondo entro 24 ore e la prima consulenza è gratuita.
+            Cerchi un web designer freelance a Torino o nel Canavese? Scrivimi
+            per raccontarmi la tua idea. Rispondo entro 24 ore e la prima
+            consulenza è gratuita.
           </p>
         </div>
       </section>
@@ -229,10 +230,11 @@ export default function Contatti() {
                 </div>
                 <div>
                   <p className="font-semibold">Zona servita</p>
-                  <p className="text-sm text-muted">Torino e provincia</p>
+                  <p className="text-sm text-muted">Torino e Canavese</p>
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted">
+                Torino, Ivrea, Chivasso, Rivarolo Canavese e tutto il Canavese.
                 Per i progetti online, lavoro anche con attività in tutta Italia.
               </p>
             </div>

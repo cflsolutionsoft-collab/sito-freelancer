@@ -34,7 +34,7 @@ Il tono del sito deve essere professionale ma umano, diretto e semplice. Il clie
 
 ## 3. Target di clienti
 
-Fabio si rivolge esclusivamente a **piccole attività locali nel torinese**, con 1-10 dipendenti, gestite da un titolare che prende le decisioni in autonomia senza passare per comitati o uffici acquisti.
+Fabio si rivolge a **piccole attività locali a Torino e nel Canavese** (da Chivasso a Ivrea e dintorni), con 1-10 dipendenti, gestite da un titolare che prende le decisioni in autonomia senza passare per comitati o uffici acquisti.
 
 ### Identikit del cliente tipo
 - È un imprenditore locale: un ristoratore, un parrucchiere, un'estetista, un artigiano, un fotografo, un consulente, un medico, un negoziante, un agente immobiliare, un personal trainer
@@ -46,7 +46,7 @@ Fabio si rivolge esclusivamente a **piccole attività locali nel torinese**, con
 - Apprezza la semplicità, la chiarezza e la velocità di esecuzione
 
 ### Perché questo target è ideale per Fabio
-Le piccole attività locali decidono rapidamente, non hanno pretese enterprise, sono fedeli se trattate bene e sono perfettamente compatibili con i prezzi offerti. Fabio può incontrarle di persona a Torino, costruendo un rapporto umano che le grandi agenzie non riescono a offrire.
+Le piccole attività locali decidono rapidamente, non hanno pretese enterprise, sono fedeli se trattate bene e sono perfettamente compatibili con i prezzi offerti. Fabio può incontrarle di persona a Torino e nel Canavese (zona in cui vive), costruendo un rapporto umano che le grandi agenzie non riescono a offrire. Il Canavese conta circa 32.000 imprese di cui il 90% micro-imprese — un bacino enorme e poco servito dal punto di vista web.
 
 ---
 
@@ -193,13 +193,28 @@ Le modifiche straordinarie non sono rifiutate — vengono quotate separatamente 
 - Email
 
 ### SEO locale — keyword target
+
+**Keyword geografiche (brand/autorità):**
 - "web designer freelance Torino"
-- "sito web Torino"
 - "realizzazione siti web Torino"
-- "sito web piccole attività Torino"
-- "web designer economico Torino"
-- "sito web ristorante Torino"
-- "sito web parrucchiere Torino"
+- "web designer Ivrea"
+- "sito web Canavese"
+- "sito web Chivasso"
+
+**Keyword di segmento (nazionali, bassa competizione, alto intento):**
+- "sito web ristorante"
+- "sito web parrucchiere"
+- "sito web centro estetico"
+- "sito web bed and breakfast"
+- "sito web studio medico"
+- "sito web negozio"
+
+**Keyword informazionali (traffico + conversione):**
+- "quanto costa un sito web"
+- "sito web ristorante costo"
+- "sito web parrucchiere prezzo"
+
+**Strategia:** le keyword generiche ("web designer Torino") hanno alta competizione — usarle come secondarie. Le keyword di segmento hanno poca competizione e intento d'acquisto fortissimo. Le keyword geo+segmento ("sito web ristorante Torino") hanno volume bassissimo ma conversione altissima. Il Canavese ha competizione quasi nulla.
 
 ### Google Business Profile
 Da creare dopo il lancio del sito. La scheda GBP è fondamentale per il posizionamento locale su Google Maps e nelle ricerche geolocalizzate.

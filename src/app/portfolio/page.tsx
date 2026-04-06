@@ -11,14 +11,14 @@ import { breadcrumbSchema, portfolioItemListSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Progetti web realizzati per attività locali a Torino. Siti vetrina, sistemi di prenotazione e soluzioni su misura.",
+    "Progetti web realizzati per attività locali a Torino e nel Canavese. Siti vetrina, sistemi di prenotazione e soluzioni su misura.",
   alternates: {
     canonical: "https://fabioregnaud.it/portfolio",
   },
   openGraph: {
     title: "Portfolio — Fabio Regnaud",
     description:
-      "Progetti web realizzati per attività locali a Torino. Siti vetrina, sistemi di prenotazione e soluzioni su misura.",
+      "Progetti web realizzati per attività locali a Torino e nel Canavese. Siti vetrina, sistemi di prenotazione e soluzioni su misura.",
     url: "https://fabioregnaud.it/portfolio",
   },
 };
@@ -50,7 +50,7 @@ const progetti = [
   {
     id: "danorasud",
     nome: "Danorasud",
-    tipo: "Vetrina + prenotazioni + pagamenti",
+    tipo: "Vetrina + prenotazioni + pagamenti — Rivarolo Canavese",
     descrizione:
       "Piattaforma completa per un home restaurant a Rivarolo Canavese. I clienti consultano il calendario delle serate, prenotano il proprio posto con un flusso guidato e pagano direttamente online. Il sito lavora in automatico: invia email di conferma ai clienti, notifica lo chef ad ogni nuova prenotazione e aggiorna la disponibilità in tempo reale. Lo chef gestisce tutto da una dashboard dedicata.",
     problema:
@@ -107,7 +107,7 @@ export default function Portfolio() {
             <span className="font-display italic text-primary">realizzati</span>
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Progetti web realizzati per attività locali a Torino e dintorni.
+            Progetti web realizzati per attività locali a Torino e nel Canavese.
             Ogni sito è costruito su misura per risolvere problemi concreti.
           </p>
         </div>

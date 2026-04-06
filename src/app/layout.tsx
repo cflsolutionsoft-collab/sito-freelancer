@@ -28,11 +28,11 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Fabio Regnaud — Web Designer Freelance a Torino",
+    default: "Fabio Regnaud — Web Designer Freelance a Torino e in Canavese",
     template: "%s — Fabio Regnaud",
   },
   description:
-    "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+    "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
   authors: [{ name: "Fabio Regnaud" }],
   creator: "Fabio Regnaud",
   robots: {
@@ -49,23 +49,23 @@ export const metadata: Metadata = {
     locale: "it_IT",
     url: SITE_URL,
     siteName: "Fabio Regnaud — Web Designer Freelance",
-    title: "Fabio Regnaud — Web Designer Freelance a Torino",
+    title: "Fabio Regnaud — Web Designer Freelance a Torino e in Canavese",
     description:
-      "Creo siti web professionali e veloci per piccole attività a Torino. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
+      "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese. Siti vetrina, sistemi di prenotazione ed e-commerce su misura.",
     images: [
       {
         url: `${SITE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Fabio Regnaud — Web Designer Freelance a Torino",
+        alt: "Fabio Regnaud — Web Designer Freelance a Torino e in Canavese",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fabio Regnaud — Web Designer Freelance a Torino",
+    title: "Fabio Regnaud — Web Designer Freelance a Torino e in Canavese",
     description:
-      "Creo siti web professionali e veloci per piccole attività a Torino.",
+      "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese.",
   },
 };
 
