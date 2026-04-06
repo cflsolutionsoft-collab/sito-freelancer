@@ -3,13 +3,13 @@
 const SITE_URL = "https://fabioregnaud.it";
 
 /**
- * Schema ProfessionalService per la homepage.
+ * Schema LocalBusiness + ProfessionalService per la homepage.
  * Descrive Fabio Regnaud come web designer freelance a Torino.
  */
 export function professionalServiceSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["ProfessionalService", "LocalBusiness"],
     "@id": `${SITE_URL}/#business`,
     name: "Fabio Regnaud — Web Designer Freelance",
     description:
@@ -17,6 +17,7 @@ export function professionalServiceSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/images/logo.webp`,
     image: `${SITE_URL}/og-image.jpg`,
+    email: "info@fabioregnaud.it",
     priceRange: "€€",
     areaServed: {
       "@type": "City",
@@ -37,9 +38,13 @@ export function professionalServiceSchema() {
       latitude: 45.0703,
       longitude: 7.6869,
     },
-    // TODO: aggiungere email e telefono reali
-    // email: "fabio@example.com",
-    // telephone: "+39XXXXXXXXXX",
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "14:00",
+      closes: "19:00",
+    },
+    founder: { "@id": `${SITE_URL}/#person` },
     knowsAbout: [
       "Web Design",
       "Sviluppo Web",
@@ -103,6 +108,43 @@ export function professionalServiceSchema() {
 }
 
 /**
+ * Schema Person per Fabio Regnaud (brand personale).
+ * Collega la persona all'attività e rafforza la knowledge graph.
+ */
+export function personSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
+    name: "Fabio Regnaud",
+    jobTitle: "Web Designer Freelance",
+    url: SITE_URL,
+    email: "info@fabioregnaud.it",
+    image: `${SITE_URL}/images/logo.webp`,
+    worksFor: { "@id": `${SITE_URL}/#business` },
+    knowsAbout: [
+      "Web Design",
+      "Sviluppo Web",
+      "Next.js",
+      "SEO",
+      "E-commerce",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Torino",
+      addressRegion: "Piemonte",
+      addressCountry: "IT",
+    },
+    // TODO: aggiungere sameAs quando i profili social saranno attivi
+    // sameAs: [
+    //   "https://www.linkedin.com/in/fabioregnaud",
+    //   "https://github.com/fabioregnaud",
+    //   "https://www.instagram.com/fabioregnaud",
+    // ],
+  };
+}
+
+/**
  * Schema FAQPage per la pagina servizi.
  */
 export function faqSchema(
@@ -136,6 +178,31 @@ export function breadcrumbSchema(
       position: index + 1,
       name: item.name,
       item: item.url,
+    })),
+  };
+}
+
+/**
+ * Schema ItemList per il portfolio (lista progetti realizzati).
+ */
+export function portfolioItemListSchema(
+  progetti: Array<{ nome: string; descrizione: string; url?: string; immagine?: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Portfolio — Progetti web realizzati",
+    itemListElement: progetti.map((progetto, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "CreativeWork",
+        name: progetto.nome,
+        description: progetto.descrizione,
+        ...(progetto.url && { url: progetto.url }),
+        ...(progetto.immagine && { image: `${SITE_URL}${progetto.immagine}` }),
+        author: { "@id": `${SITE_URL}/#person` },
+      },
     })),
   };
 }

@@ -22,6 +22,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import JsonLd from "@/components/ui/JsonLd";
 import {
   professionalServiceSchema,
+  personSchema,
   webSiteSchema,
   breadcrumbSchema,
 } from "@/lib/schema";
@@ -153,6 +154,7 @@ export default function Home() {
     <>
       {/* Structured Data */}
       <JsonLd data={professionalServiceSchema()} />
+      <JsonLd data={personSchema()} />
       <JsonLd data={webSiteSchema()} />
       <JsonLd
         data={breadcrumbSchema([

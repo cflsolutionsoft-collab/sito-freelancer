@@ -6,7 +6,7 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import JsonLd from "@/components/ui/JsonLd";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, portfolioItemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -81,6 +81,16 @@ export default function Portfolio() {
           { name: "Home", url: "https://fabioregnaud.it" },
           { name: "Portfolio", url: "https://fabioregnaud.it/portfolio" },
         ])}
+      />
+      <JsonLd
+        data={portfolioItemListSchema(
+          progetti.map((p) => ({
+            nome: p.nome,
+            descrizione: p.descrizione,
+            url: p.url,
+            immagine: p.immagine,
+          }))
+        )}
       />
 
       {/* Intestazione */}
