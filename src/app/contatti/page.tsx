@@ -6,6 +6,7 @@ import { useState, type FormEvent } from "react";
 import { Mail, MessageCircle, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export default function Contatti() {
   const [invio, setInvio] = useState<"idle" | "invio" | "successo" | "errore">(
@@ -33,6 +34,7 @@ export default function Contatti() {
           <div className="dot-grid h-full w-full" />
         </div>
         <div className="relative mx-auto max-w-3xl text-center">
+          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Contatti" }]} />
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Contatti
           </p>

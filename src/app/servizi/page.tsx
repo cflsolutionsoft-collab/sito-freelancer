@@ -16,6 +16,7 @@ import {
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import JsonLd from "@/components/ui/JsonLd";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -220,6 +221,7 @@ export default function Servizi() {
           <div className="dot-grid h-full w-full" />
         </div>
         <div className="relative mx-auto max-w-3xl text-center">
+          <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Servizi" }]} />
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Servizi
           </p>
@@ -687,14 +689,14 @@ export default function Servizi() {
               Scrivimi e ne parliamo insieme, senza impegno. Ti aiuto a
               scegliere il sito web giusto per la tua attività a Torino o nel Canavese.
             </p>
-            <Button
-              href="/contatti"
-              size="lg"
-              variant="accent"
-              className="mt-10"
-            >
-              Contattami <ArrowRight size={18} />
-            </Button>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Button href="/contatti" size="lg" variant="accent">
+                Contattami <ArrowRight size={18} />
+              </Button>
+              <Button href="/portfolio" size="lg" variant="secondary" className="border-white/20 text-white hover:bg-white/10 hover:text-white">
+                Vedi i lavori realizzati
+              </Button>
+            </div>
           </div>
         </div>
       </SectionWrapper>
