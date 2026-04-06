@@ -96,18 +96,20 @@ const pacchetti = [
   {
     id: "su-misura",
     icon: Code,
-    nome: "Web App Su Misura",
+    nome: "Web App Gestionale",
     prezzo: null,
     descrizione:
-      "Per esigenze più complesse: gestionali, aree riservate, piattaforme multi-utente, integrazioni.",
+      "Non solo siti web: costruisco web app gestionali che organizzano e semplificano il lavoro quotidiano della tua attività. Iscrizioni utenti, pagamenti ricorrenti, comunicazioni automatiche, dashboard di gestione — tutto su misura.",
     ideale:
-      "Attività con esigenze specifiche che vanno oltre i pacchetti standard.",
+      "Asili nido, scuole, associazioni, ludoteche, palestre, studi medici e qualsiasi attività che ha bisogno di gestire iscrizioni, pagamenti, comunicazioni o prenotazioni complesse.",
     include: [
       "Analisi delle esigenze e consulenza gratuita",
-      "Progettazione su misura",
-      "Sviluppo con tecnologie moderne e scalabili",
-      "Formazione sull'utilizzo",
-      "Manutenzione e assistenza personalizzata",
+      "Area riservata con registrazione e login utenti",
+      "Dashboard di gestione per titolare e staff",
+      "Pagamenti online e ricorrenti (rette, abbonamenti, quote)",
+      "Comunicazioni automatiche (email, notifiche)",
+      "Database su misura per la tua attività",
+      "Formazione sull'utilizzo e manutenzione personalizzata",
     ],
   },
 ];
@@ -244,12 +246,12 @@ export default function Servizi() {
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
             Come nasce il tuo{" "}
-            <span className="font-display italic">sito</span>
+            <span className="font-display italic">progetto</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
-            Ogni sito web che realizzo segue un percorso strutturato.
-            Niente improvvisazione — solo un metodo collaudato che porta
-            a risultati concreti per la tua attività.
+            Che sia un sito web o una web app gestionale, ogni progetto
+            segue un percorso strutturato. Niente improvvisazione — solo
+            un metodo collaudato che porta a risultati concreti.
           </p>
         </div>
         <div className="mt-12 space-y-6">
@@ -258,7 +260,7 @@ export default function Servizi() {
               step: "01",
               titolo: "Ascolto",
               descrizione:
-                "Ci incontriamo di persona a Torino o nel Canavese. Capisco chi sei, cosa fa la tua attività, chi sono i tuoi clienti e quali obiettivi vuoi raggiungere con il sito. Nessun questionario online — una conversazione vera, davanti a un caffè.",
+                "Ci incontriamo di persona a Torino o nel Canavese. Capisco chi sei, cosa fa la tua attività e cosa ti serve: più clienti online, oppure uno strumento per organizzare meglio il lavoro quotidiano. Nessun questionario online — una conversazione vera, davanti a un caffè.",
             },
             {
               step: "02",

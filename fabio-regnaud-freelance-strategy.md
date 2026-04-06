@@ -130,16 +130,23 @@ Ideale per: negozi locali che vogliono vendere online, artigiani con prodotti pr
 
 ---
 
-### Pacchetto 4 — Web App Su Misura
+### Pacchetto 4 — Web App Gestionale
 **Prezzo: su preventivo**
 
-Per esigenze più complesse che vanno oltre i pacchetti standard. Esempi:
-- Gestionali interni
-- Aree riservate con login
-- Piattaforme con più tipologie di utenti
-- Integrazioni con sistemi esterni
+Web app gestionali su misura che organizzano e semplificano il lavoro quotidiano dell'attività. A differenza dei siti vetrina (che attraggono clienti), le web app gestionali risolvono problemi operativi interni. Esempi concreti:
+- **Asilo nido**: gestione iscrizioni, buoni pasto, pagamento rette ricorrenti, comunicazioni alle famiglie
+- **Ludoteca/associazione**: catalogo, prenotazioni, gestione eventi, dashboard multi-ruolo (già realizzato per Doppio Uno)
+- **Palestra/scuola**: iscrizioni, abbonamenti, calendario corsi, presenze
+- **Studio medico**: cartelle pazienti, appuntamenti complessi, referti
 
-Il preventivo viene preparato dopo una call conoscitiva gratuita per capire le esigenze specifiche.
+Funzionalità trasversali:
+- Area riservata con registrazione e login utenti
+- Dashboard di gestione per titolare e staff con permessi per ruolo
+- Pagamenti online e ricorrenti (rette, abbonamenti, quote) tramite Stripe
+- Comunicazioni automatiche (email, notifiche)
+- Database su misura con Firebase Firestore
+
+Il preventivo viene preparato dopo una consulenza gratuita per capire le esigenze specifiche.
 
 ---
 
@@ -201,7 +208,7 @@ Le modifiche straordinarie non sono rifiutate — vengono quotate separatamente 
 - "sito web Canavese"
 - "sito web Chivasso"
 
-**Keyword di segmento (nazionali, bassa competizione, alto intento):**
+**Keyword di segmento — siti web (nazionali, bassa competizione, alto intento):**
 - "sito web ristorante"
 - "sito web parrucchiere"
 - "sito web centro estetico"
@@ -209,12 +216,21 @@ Le modifiche straordinarie non sono rifiutate — vengono quotate separatamente 
 - "sito web studio medico"
 - "sito web negozio"
 
+**Keyword di segmento — web app gestionali:**
+- "gestionale web su misura"
+- "web app gestionale"
+- "gestionale asilo nido"
+- "gestionale prenotazioni"
+- "software gestionale attività"
+- "web app iscrizioni online"
+
 **Keyword informazionali (traffico + conversione):**
 - "quanto costa un sito web"
 - "sito web ristorante costo"
 - "sito web parrucchiere prezzo"
+- "gestionale su misura quanto costa"
 
-**Strategia:** le keyword generiche ("web designer Torino") hanno alta competizione — usarle come secondarie. Le keyword di segmento hanno poca competizione e intento d'acquisto fortissimo. Le keyword geo+segmento ("sito web ristorante Torino") hanno volume bassissimo ma conversione altissima. Il Canavese ha competizione quasi nulla.
+**Strategia:** l'offerta si divide in due filoni — (1) siti web che attraggono clienti (vetrina, prenotazioni, ecommerce) e (2) web app gestionali che organizzano l'attività internamente (iscrizioni, pagamenti ricorrenti, comunicazioni, dashboard). Le keyword generiche ("web designer Torino") hanno alta competizione — usarle come secondarie. Le keyword di segmento hanno poca competizione e intento d'acquisto fortissimo. Le keyword gestionali hanno volume medio-basso ma competizione quasi nulla nel mercato freelance locale. Il Canavese ha competizione quasi nulla su entrambi i filoni.
 
 ### Google Business Profile
 Da creare dopo il lancio del sito. La scheda GBP è fondamentale per il posizionamento locale su Google Maps e nelle ricerche geolocalizzate.

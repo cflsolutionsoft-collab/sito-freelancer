@@ -12,6 +12,7 @@ import {
   ArrowRight,
   CalendarCheck,
   ShoppingBag,
+  Code,
   Sparkles,
   Clock,
   TrendingUp,
@@ -34,14 +35,14 @@ export const metadata: Metadata = {
     absolute: "Fabio Regnaud — Web Designer Freelance a Torino e in Canavese",
   },
   description:
-    "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese. Siti vetrina per ristoranti, parrucchieri, centri estetici e B&B. Sistemi di prenotazione ed e-commerce su misura.",
+    "Creo siti web e web app gestionali per piccole attività a Torino e in Canavese. Siti vetrina, sistemi di prenotazione, e-commerce e gestionali su misura per ristoranti, parrucchieri, centri estetici e asili nido.",
   alternates: {
     canonical: "https://fabioregnaud.it",
   },
   openGraph: {
     title: "Fabio Regnaud — Web Designer Freelance a Torino e in Canavese",
     description:
-      "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese. Siti vetrina per ristoranti, parrucchieri, centri estetici e B&B. Sistemi di prenotazione ed e-commerce su misura.",
+      "Creo siti web e web app gestionali per piccole attività a Torino e in Canavese. Siti vetrina, sistemi di prenotazione, e-commerce e gestionali su misura per ristoranti, parrucchieri, centri estetici e asili nido.",
     url: "https://fabioregnaud.it",
   },
 };
@@ -145,6 +146,14 @@ const servizi = [
       "Vendi i tuoi prodotti o servizi online con pagamenti sicuri. Per negozi locali e artigiani che vogliono vendere anche fuori dal Canavese.",
     href: "/servizi#ecommerce",
   },
+  {
+    icon: Code,
+    nome: "Web App Gestionale",
+    prezzo: null,
+    descrizione:
+      "Gestionali su misura per organizzare la tua attività: iscrizioni, pagamenti ricorrenti, comunicazioni e dashboard. Per asili nido, associazioni, scuole e attività complesse.",
+    href: "/servizi#su-misura",
+  },
 ];
 
 // === COMPONENTE PAGINA ===
@@ -184,9 +193,9 @@ export default function Home() {
             </h1>
 
             <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-              Realizzo siti web professionali, veloci e ottimizzati per Google.
-              Pensati per le piccole attività di Torino e del Canavese che vogliono
-              farsi trovare online dai propri clienti.
+              Realizzo siti web professionali e web app gestionali su misura.
+              Per le piccole attività di Torino e del Canavese che vogliono
+              farsi trovare online e organizzare meglio il proprio lavoro.
             </p>
 
             <div className="animate-fade-in-up delay-300 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -372,10 +381,10 @@ export default function Home() {
             <span className="font-display italic">esigenza</span>
           </h2>
           <p className="mt-3 text-lg text-muted">
-            Tre pacchetti chiari con prezzi trasparenti. Senza sorprese.
+            Dai siti vetrina ai gestionali su misura. Prezzi trasparenti, senza sorprese.
           </p>
         </div>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {servizi.map((servizio, i) => (
             <div
               key={servizio.nome}
@@ -392,12 +401,18 @@ export default function Home() {
                 <servizio.icon size={22} />
               </div>
               <h3 className="text-lg font-semibold">{servizio.nome}</h3>
-              <p className="mt-1 text-2xl font-bold">
-                <span className="text-sm font-normal text-muted">
-                  a partire da{" "}
-                </span>
-                <span className="text-primary">€{servizio.prezzo}</span>
-              </p>
+              {servizio.prezzo ? (
+                <p className="mt-1 text-2xl font-bold">
+                  <span className="text-sm font-normal text-muted">
+                    a partire da{" "}
+                  </span>
+                  <span className="text-primary">€{servizio.prezzo}</span>
+                </p>
+              ) : (
+                <p className="mt-1 text-2xl font-bold text-primary">
+                  Su preventivo
+                </p>
+              )}
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
                 {servizio.descrizione}
               </p>
@@ -432,7 +447,7 @@ export default function Home() {
             <span className="font-display italic">realizzati</span>
           </h2>
           <p className="mt-3 text-lg text-muted">
-            Siti web realizzati per attività locali a Torino e nel Canavese.
+            Siti web e web app realizzati per attività locali a Torino e nel Canavese.
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
@@ -452,14 +467,15 @@ export default function Home() {
             </div>
             <div className="p-6">
               <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                Web app + prenotazioni
+                Web app gestionale
               </span>
               <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-primary">
                 Doppio Uno — Ludoteca
               </h3>
               <p className="mt-1 text-sm text-muted">
-                Piattaforma con catalogo giochi, prenotazione tavoli e
-                dashboard di gestione per un&apos;associazione ludica.
+                Web app gestionale con catalogo giochi, prenotazione tavoli,
+                gestione eventi e dashboard admin multi-ruolo per
+                un&apos;associazione ludica.
               </p>
             </div>
           </a>

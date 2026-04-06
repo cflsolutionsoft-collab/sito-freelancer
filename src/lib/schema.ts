@@ -70,10 +70,12 @@ export function professionalServiceSchema() {
     knowsAbout: [
       "Web Design",
       "Sviluppo Web",
+      "Web App Gestionali",
       "Next.js",
       "SEO",
       "E-commerce",
       "Sistemi di prenotazione",
+      "Gestionali su misura",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -124,6 +126,15 @@ export function professionalServiceSchema() {
             minPrice: "1000",
           },
         },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Web App Gestionale",
+            description:
+              "Web app gestionale su misura con iscrizioni utenti, pagamenti ricorrenti, comunicazioni automatiche e dashboard di gestione",
+          },
+        },
       ],
     },
   };
@@ -147,9 +158,11 @@ export function personSchema() {
     knowsAbout: [
       "Web Design",
       "Sviluppo Web",
+      "Web App Gestionali",
       "Next.js",
       "SEO",
       "E-commerce",
+      "Gestionali su misura",
     ],
     address: {
       "@type": "PostalAddress",

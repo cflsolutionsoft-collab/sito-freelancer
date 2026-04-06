@@ -30,19 +30,20 @@ const progetti = [
   {
     id: "doppiouno",
     nome: "Doppio Uno",
-    tipo: "Web app + prenotazioni",
+    tipo: "Web app gestionale",
     descrizione:
-      "Piattaforma web per un'associazione ludica con centinaia di giochi da tavolo. I visitatori esplorano il catalogo giochi, consultano eventi e aperture straordinarie. I soci prenotano tavoli scegliendo data, orario e gioco da una mappa interattiva della sala. Lo staff gestisce giochi, tavoli, sale e prenotazioni da un pannello admin con permessi personalizzati.",
+      "Web app gestionale completa per un'associazione ludica con centinaia di giochi da tavolo. I visitatori esplorano il catalogo giochi e consultano eventi e aperture straordinarie. I soci prenotano tavoli scegliendo data, orario e gioco da una mappa interattiva della sala. Lo staff gestisce giochi, tavoli, sale, eventi esterni e prenotazioni da un pannello admin con permessi personalizzati per ruolo.",
     problema:
-      "L'associazione non aveva modo di mostrare il proprio catalogo giochi online né di gestire le prenotazioni dei tavoli in modo organizzato.",
+      "L'associazione non aveva modo di mostrare il proprio catalogo giochi online, gestire le prenotazioni dei tavoli in modo organizzato né coordinare gli eventi esterni con lo staff.",
     soluzione:
-      "Una web app con catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala e una dashboard admin completa con gestione ruoli e permessi per lo staff.",
+      "Una web app gestionale con catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala, gestione eventi e una dashboard admin completa con ruoli e permessi differenziati per lo staff.",
     url: "https://www.doppiouno.it",
     immagine: "/images/doppiouno.webp",
     tecnologie: [
-      "Web app personalizzata",
+      "Web app gestionale",
       "Catalogo giochi",
       "Prenotazione tavoli",
+      "Gestione eventi",
       "Mappa sala interattiva",
       "Dashboard multi-ruolo",
     ],
@@ -109,8 +110,9 @@ export default function Portfolio() {
             <span className="font-display italic text-primary">realizzati</span>
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Progetti web realizzati per attività locali a Torino e nel Canavese.
-            Ogni sito è costruito su misura per risolvere problemi concreti.
+            Siti web e web app gestionali realizzati per attività locali a Torino
+            e nel Canavese. Ogni progetto è costruito su misura per risolvere
+            problemi concreti.
           </p>
         </div>
       </section>
