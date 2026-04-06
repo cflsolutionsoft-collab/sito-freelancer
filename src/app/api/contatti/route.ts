@@ -46,7 +46,7 @@ export async function POST(request: Request) {
     const { nome, email, attivita, messaggio } = body;
 
     // Email di notifica a Fabio
-    await resend.emails.send({
+    const notifica = await resend.emails.send({
       from: EMAIL_FROM,
       to: EMAIL_TO,
       replyTo: email,
@@ -61,8 +61,16 @@ export async function POST(request: Request) {
       `,
     });
 
+    if (notifica.error) {
+      console.error("[API contatti] Errore notifica:", notifica.error);
+      return NextResponse.json(
+        { error: "Errore nell'invio del messaggio. Riprova più tardi." },
+        { status: 500 }
+      );
+    }
+
     // Email di conferma al cliente
-    await resend.emails.send({
+    const conferma = await resend.emails.send({
       from: EMAIL_FROM,
       to: email,
       subject: "Ho ricevuto il tuo messaggio — Fabio Regnaud",
@@ -73,6 +81,11 @@ export async function POST(request: Request) {
         <p>A presto,<br>Fabio Regnaud<br>Web Designer Freelance — Torino e Canavese<br><a href="https://fabioregnaud.it">fabioregnaud.it</a></p>
       `,
     });
+
+    if (conferma.error) {
+      console.error("[API contatti] Errore conferma:", conferma.error);
+      // La notifica è andata a buon fine, non blocchiamo l'utente
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
