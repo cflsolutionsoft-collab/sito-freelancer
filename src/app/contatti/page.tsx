@@ -13,14 +13,43 @@ export default function Contatti() {
     "idle"
   );
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const [errore, setErrore] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setInvio("invio");
+    setErrore("");
 
-    // TODO: integrare invio email (Resend o EmailJS)
-    setTimeout(() => {
+    const formData = new FormData(e.currentTarget);
+    const body = {
+      nome: formData.get("nome") as string,
+      email: formData.get("email") as string,
+      attivita: formData.get("attivita") as string,
+      messaggio: formData.get("messaggio") as string,
+      website: formData.get("website") as string,
+    };
+
+    try {
+      const res = await fetch("/api/contatti", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Errore nell'invio del messaggio.");
+      }
+
       setInvio("successo");
-    }, 1000);
+    } catch (err) {
+      setInvio("errore");
+      setErrore(
+        err instanceof Error
+          ? err.message
+          : "Errore nell'invio del messaggio. Riprova più tardi."
+      );
+    }
   }
 
   const inputClasses =
@@ -173,6 +202,12 @@ export default function Contatti() {
                       </>
                     )}
                   </Button>
+
+                  {invio === "errore" && errore && (
+                    <p className="text-center text-sm text-red-600">
+                      {errore}
+                    </p>
+                  )}
 
                   <p className="text-center text-xs text-muted">
                     I campi con <span className="text-accent">*</span> sono
