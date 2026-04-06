@@ -4,29 +4,33 @@ import type { MetadataRoute } from "next";
 
 const SITE_URL = "https://fabioregnaud.it";
 
+// Data dell'ultimo aggiornamento significativo del sito.
+// Aggiornare manualmente quando si modificano contenuti importanti.
+const LAST_UPDATED = "2026-04-06";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: SITE_URL,
-      lastModified: new Date(),
+      lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: `${SITE_URL}/servizi`,
-      lastModified: new Date(),
+      lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/portfolio`,
-      lastModified: new Date(),
+      lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${SITE_URL}/contatti`,
-      lastModified: new Date(),
+      lastModified: LAST_UPDATED,
       changeFrequency: "yearly",
       priority: 0.7,
     },

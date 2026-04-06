@@ -67,6 +67,10 @@ export const metadata: Metadata = {
     description:
       "Creo siti web professionali e veloci per piccole attività a Torino e in Canavese.",
   },
+  // TODO: decommentare e inserire i codici di verifica quando disponibili
+  // verification: {
+  //   google: "codice-verifica-google-search-console",
+  // },
 };
 
 export default function RootLayout({
