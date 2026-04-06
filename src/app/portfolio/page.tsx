@@ -32,15 +32,17 @@ const progetti = [
     nome: "Doppio Uno",
     tipo: "Web app gestionale",
     descrizione:
-      "Web app gestionale completa per un'associazione ludica con centinaia di giochi da tavolo. I visitatori esplorano il catalogo giochi e consultano eventi e aperture straordinarie. I soci prenotano tavoli scegliendo data, orario e gioco da una mappa interattiva della sala. Lo staff gestisce giochi, tavoli, sale, eventi esterni e prenotazioni da un pannello admin con permessi personalizzati per ruolo.",
+      "Web app gestionale completa per un'associazione ludica con centinaia di giochi da tavolo. Gli utenti si iscrivono come soci direttamente online — anche con Accedi con Google — e da quel momento possono prenotare tavoli scegliendo data, orario e gioco da una mappa interattiva della sala. I visitatori esplorano il catalogo giochi e consultano eventi e aperture straordinarie. Lo staff gestisce giochi, tavoli, sale, eventi esterni, iscritti e prenotazioni da un pannello admin con permessi personalizzati per ruolo.",
     problema:
-      "L'associazione non aveva modo di mostrare il proprio catalogo giochi online, gestire le prenotazioni dei tavoli in modo organizzato né coordinare gli eventi esterni con lo staff.",
+      "L'associazione non aveva modo di gestire le iscrizioni dei soci, mostrare il proprio catalogo giochi online, gestire le prenotazioni dei tavoli in modo organizzato né coordinare gli eventi esterni con lo staff.",
     soluzione:
-      "Una web app gestionale con catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala, gestione eventi e una dashboard admin completa con ruoli e permessi differenziati per lo staff.",
+      "Una web app gestionale con iscrizione soci online (anche tramite Google), catalogo giochi ricercabile, sistema di prenotazione tavoli con mappa visuale della sala, gestione eventi e una dashboard admin completa con ruoli e permessi differenziati per lo staff.",
     url: "https://www.doppiouno.it",
     immagine: "/images/doppiouno.webp",
     tecnologie: [
       "Web app gestionale",
+      "Iscrizione soci online",
+      "Login con Google",
       "Catalogo giochi",
       "Prenotazione tavoli",
       "Gestione eventi",
