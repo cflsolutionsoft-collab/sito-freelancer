@@ -65,15 +65,15 @@ export default function Footer() {
               <li className="flex items-center gap-3 text-slate-400">
                 <Mail size={16} className="text-primary/70" />
                 <a
-                  href="mailto:fabio@example.com"
+                  href="mailto:info@fabioregnaud.it"
                   className="transition-colors hover:text-white"
                 >
-                  fabio@example.com
+                  info@fabioregnaud.it
                 </a>
               </li>
               <li className="flex items-center gap-3 text-slate-400">
                 <MapPin size={16} className="text-primary/70" />
-                <span>Torino e provincia</span>
+                <span>Torino e Canavese</span>
               </li>
             </ul>
           </div>
@@ -99,7 +99,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-16 border-t border-slate-700/50 pt-6 text-center text-sm text-slate-600">
-          <p>&copy; {currentYear} Fabio Regnaud — P.IVA da inserire</p>
+          <p>&copy; {currentYear} Fabio Regnaud — P.IVA 13398680010</p>
         </div>
       </div>
     </footer>

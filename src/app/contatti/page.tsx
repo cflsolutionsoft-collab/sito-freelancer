@@ -250,10 +250,10 @@ export default function Contatti() {
                 <div>
                   <p className="font-semibold">Email</p>
                   <a
-                    href="mailto:fabio@example.com"
+                    href="mailto:info@fabioregnaud.it"
                     className="text-sm text-primary hover:underline"
                   >
-                    fabio@example.com
+                    info@fabioregnaud.it
                   </a>
                 </div>
               </div>
