@@ -99,7 +99,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-16 border-t border-slate-700/50 pt-6 text-center text-sm text-slate-600">
-          <p>&copy; {currentYear} Fabio Regnaud — P.IVA 13398680010</p>
+          <p>&copy; {currentYear} CFL di Regnaud Carcas Fabio — P.IVA 13398680010</p>
         </div>
       </div>
     </footer>
