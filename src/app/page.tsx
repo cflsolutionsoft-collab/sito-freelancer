@@ -460,7 +460,7 @@ export default function Home() {
                 src="/images/doppiouno.webp"
                 alt="Screenshot del sito Doppio Uno — ludoteca e associazione ludica"
                 fill
-                className="object-contain transition-transform duration-500 group-hover:scale-105"
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />
@@ -489,7 +489,7 @@ export default function Home() {
                 src="/images/danordasud.webp"
                 alt="Screenshot del sito Danorasud — home restaurant a Rivarolo Canavese"
                 fill
-                className="object-contain transition-transform duration-500 group-hover:scale-105"
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />

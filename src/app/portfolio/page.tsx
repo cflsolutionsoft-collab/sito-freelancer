@@ -129,14 +129,14 @@ export default function Portfolio() {
             >
               {/* Screenshot */}
               <div
-                className={`relative aspect-video overflow-hidden bg-gradient-to-br ${progetto.colore} md:aspect-[21/9]`}
+                className={`relative aspect-video overflow-hidden bg-gradient-to-br ${progetto.colore}`}
               >
                 {progetto.immagine ? (
                   <Image
                     src={progetto.immagine}
                     alt={`Screenshot del sito ${progetto.nome}`}
                     fill
-                    className="object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 1152px"
                     priority={i === 0}
                   />
