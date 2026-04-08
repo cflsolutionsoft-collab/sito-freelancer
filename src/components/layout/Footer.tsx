@@ -4,6 +4,7 @@ import { Mail, MapPin, ArrowUpRight } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Chi Sono", href: "/chi-sono" },
   { label: "Servizi", href: "/servizi" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Contatti", href: "/contatti" },
