@@ -187,9 +187,9 @@ export default function Home() {
             </div>
 
             <h1 className="animate-fade-in-up delay-100 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Creo siti web che portano{" "}
-              <span className="font-display italic text-primary">clienti</span>{" "}
-              alla tua attività
+              Creo siti web{" "}
+              <span className="font-display italic text-primary">su misura</span>{" "}
+              per la tua attività
             </h1>
 
             <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
@@ -313,7 +313,7 @@ export default function Home() {
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
             Prima di scrivere una riga di codice, studio la tua attività
             e il mercato locale a Torino. Così il sito web non è bello e
-            basta — è costruito per portarti clienti.
+            basta — è costruito per far funzionare la tua attività online.
           </p>
         </div>
         <div className="relative mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

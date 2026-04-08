@@ -28,8 +28,8 @@ export default function Footer() {
             Fabio Regnaud
           </p>
           <p className="mt-3 max-w-md text-slate-400">
-            Web designer freelance a Torino. Creo siti web che portano clienti
-            alla tua attività.
+            Web designer freelance a Torino. Creo siti web su misura per
+            piccole attività locali.
           </p>
         </div>
 

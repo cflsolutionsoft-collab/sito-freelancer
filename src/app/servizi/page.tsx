@@ -447,7 +447,7 @@ export default function Servizi() {
           </h2>
           <p className="mt-3 text-lg text-muted">
             Con una piattaforma a template hai un sito generico. Con un web
-            designer freelance hai un sito web che lavora per portarti clienti.
+            designer freelance hai un sito web costruito su misura che lavora per te.
           </p>
         </div>
         <div className="mt-12 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
