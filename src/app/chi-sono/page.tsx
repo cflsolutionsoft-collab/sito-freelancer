@@ -67,7 +67,7 @@ export default function ChiSono() {
             <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
               <div className="relative overflow-hidden rounded-3xl border border-border shadow-xl">
                 <Image
-                  src="/images/Fabio.png"
+                  src="/images/fabio.png"
                   alt="Fabio Regnaud — Web Designer Freelance"
                   width={500}
                   height={625}
@@ -115,7 +115,7 @@ export default function ChiSono() {
           {/* Foto al lavoro */}
           <div className="mt-10 overflow-hidden rounded-2xl border border-border shadow-lg">
             <Image
-              src="/images/Fabio_programma.png"
+              src="/images/fabio-programma.png"
               alt="Fabio Regnaud al lavoro — sviluppo web alla scrivania"
               width={900}
               height={600}
