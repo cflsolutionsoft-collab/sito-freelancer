@@ -111,6 +111,17 @@ export default function ChiSono() {
               la voglia) di pensare al sito web.
             </p>
           </div>
+
+          {/* Foto al lavoro */}
+          <div className="mt-10 overflow-hidden rounded-2xl border border-border shadow-lg">
+            <Image
+              src="/images/Fabio_programma.png"
+              alt="Fabio Regnaud al lavoro — sviluppo web alla scrivania"
+              width={900}
+              height={600}
+              className="w-full object-cover"
+            />
+          </div>
         </div>
       </SectionWrapper>
 
