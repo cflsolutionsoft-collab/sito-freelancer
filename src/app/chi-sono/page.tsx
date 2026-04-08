@@ -64,7 +64,7 @@ export default function ChiSono() {
             </div>
 
             {/* Foto */}
-            <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+            <div className="relative mx-auto w-full max-w-xs lg:max-w-sm">
               <div className="relative overflow-hidden rounded-3xl border border-border shadow-xl">
                 <Image
                   src="/images/fabio.png"
