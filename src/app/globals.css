@@ -216,8 +216,8 @@ body::before {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -0.35em;
-  height: 0.35em;
+  bottom: -0.08em;
+  height: 0.18em;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M0 6 Q 15 0 30 6 T 60 6 T 90 6 T 120 6' fill='none' stroke='%234338ca' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -226,6 +226,7 @@ body::before {
   transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1);
   transition-delay: 0.4s;
   opacity: 0.7;
+  pointer-events: none;
 }
 
 /* Si attiva quando un antenato .reveal entra in viewport (via transition) */
