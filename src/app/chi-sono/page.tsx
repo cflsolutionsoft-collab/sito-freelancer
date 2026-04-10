@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import JsonLd from "@/components/ui/JsonLd";
 import Reveal from "@/components/ui/Reveal";
+import LinkedInBadge from "@/components/ui/LinkedInBadge";
 import { breadcrumbSchema, personSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -243,6 +244,30 @@ export default function ChiSono() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Badge LinkedIn */}
+      <SectionWrapper>
+        <div className="mx-auto max-w-2xl text-center">
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+              Rimaniamo in contatto
+            </p>
+            <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
+              Trovami anche su{" "}
+              <span className="wavy-underline font-display italic">
+                LinkedIn
+              </span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-lg text-muted">
+              Se preferisci conoscermi attraverso il mio percorso professionale,
+              dai un&apos;occhiata al mio profilo.
+            </p>
+          </Reveal>
+          <Reveal delay={150} className="mt-10">
+            <LinkedInBadge />
+          </Reveal>
         </div>
       </SectionWrapper>
 
