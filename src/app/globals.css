@@ -240,6 +240,17 @@ body::before {
   animation: wavy-draw 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.7s both;
 }
 
+/* === Badge LinkedIn === */
+/* Lo script di LinkedIn trasforma .LI-profile-badge iniettando un iframe.
+   Forziamo il contenitore a larghezza "fit" con margin auto così resta
+   perfettamente centrato nel suo parent, indipendentemente da come LinkedIn
+   rende il markup interno. */
+.LI-profile-badge {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* === Rispetto preferenze utente === */
 @media (prefers-reduced-motion: reduce) {
   *,

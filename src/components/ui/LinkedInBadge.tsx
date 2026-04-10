@@ -2,24 +2,27 @@
 
 // Badge LinkedIn ufficiale — carica lo script platform.linkedin.com
 // con next/script in modalità lazyOnload per non impattare l'LCP.
-// Fino a che lo script non arriva, si vede solo il link testuale di fallback.
+//
+// Il link testuale di fallback viene reso accessibile (sr-only) ma
+// nascosto visivamente, così non si vede il nome "Fabio Regnaud Carcas"
+// prima che lo script iniett l'iframe del badge vero.
 
 import Script from "next/script";
 
 export default function LinkedInBadge() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex w-full justify-center">
       <div
         className="badge-base LI-profile-badge"
         data-locale="it_IT"
-        data-size="medium"
+        data-size="large"
         data-theme="light"
-        data-type="VERTICAL"
+        data-type="HORIZONTAL"
         data-vanity="fabio-regnaud-carcas"
         data-version="v1"
       >
         <a
-          className="badge-base__link LI-simple-link"
+          className="badge-base__link LI-simple-link sr-only"
           href="https://it.linkedin.com/in/fabio-regnaud-carcas?trk=profile-badge"
           target="_blank"
           rel="noopener noreferrer"
