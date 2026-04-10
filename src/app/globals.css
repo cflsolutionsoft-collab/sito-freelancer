@@ -21,15 +21,16 @@
 
 html {
   scroll-behavior: smooth;
-  /* Previene scroll orizzontale causato da decori assoluti o transform che sforano */
-  overflow-x: hidden;
 }
 
 body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
-  overflow-x: hidden;
+  /* Previene scroll orizzontale da decori assoluti/transform che sforano.
+     Usiamo `clip` invece di `hidden` perche' non crea un nuovo scroll
+     container, quindi non rompe position: sticky dell'header. */
+  overflow-x: clip;
 }
 
 /* Selezione testo personalizzata */
