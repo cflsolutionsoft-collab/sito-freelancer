@@ -16,7 +16,7 @@ interface RevealProps {
   direction?: Direction;
   /** Ritardo in millisecondi (default 0) */
   delay?: number;
-  /** Durata animazione in millisecondi (default 700) */
+  /** Durata animazione in millisecondi (default 1000) */
   duration?: number;
   /** Se true (default) anima solo la prima volta */
   once?: boolean;
@@ -32,7 +32,7 @@ export default function Reveal({
   children,
   direction = "up",
   delay = 0,
-  duration = 700,
+  duration = 1000,
   once = true,
   threshold = 0.15,
   className,
