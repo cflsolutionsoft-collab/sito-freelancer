@@ -30,20 +30,25 @@ export default function ChatWidget() {
   const [error, setError] = useState<string | null>(null);
   const [limitReached, setLimitReached] = useState(false);
 
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
   // Scroll automatico all'ultimo messaggio quando ne arrivano di nuovi.
+  // Scrolla SOLO il container interno (non la pagina) usando scrollTo sul ref,
+  // per evitare che il comportamento di scrollIntoView trascini anche il document.
   useEffect(() => {
-    if (isOpen) {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
+    if (!isOpen) return;
+    const container = messagesContainerRef.current;
+    if (!container) return;
+    container.scrollTo({ top: container.scrollHeight, behavior: "smooth" });
   }, [messages, isLoading, isOpen]);
 
   // Focus automatico sull'input quando si apre la chat.
+  // preventScroll: il widget e' gia' fixed in viewport, non serve scrollare
+  // la pagina per portarlo in vista (causava il "saltello" all'apertura).
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 100);
+      setTimeout(() => inputRef.current?.focus({ preventScroll: true }), 100);
     }
   }, [isOpen]);
 
@@ -158,7 +163,10 @@ export default function ChatWidget() {
           </div>
 
           {/* Area messaggi */}
-          <div className="flex-1 space-y-3 overflow-y-auto bg-surface-warm px-4 py-4">
+          <div
+            ref={messagesContainerRef}
+            className="flex-1 space-y-3 overflow-y-auto overscroll-contain bg-surface-warm px-4 py-4"
+          >
             {/* Messaggio di benvenuto sempre mostrato */}
             <MessageBubble role="assistant" content={WELCOME_MESSAGE} />
 
@@ -178,8 +186,6 @@ export default function ChatWidget() {
                 {error}
               </div>
             )}
-
-            <div ref={messagesEndRef} />
           </div>
 
           {/* Input area */}
