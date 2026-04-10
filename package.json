@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.87.0",
     "clsx": "^2.1.1",
     "firebase": "^12.11.0",
     "lucide-react": "^1.7.0",

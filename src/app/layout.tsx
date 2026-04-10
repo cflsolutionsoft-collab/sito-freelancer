@@ -4,6 +4,7 @@ import { Instrument_Serif } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ErrorBoundary from "@/components/layout/ErrorBoundary";
+import ChatWidget from "@/components/chat/ChatWidget";
 import "./globals.css";
 
 const SITE_URL = "https://fabioregnaud.it";
@@ -88,6 +89,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <ChatWidget />
         </ErrorBoundary>
       </body>
     </html>

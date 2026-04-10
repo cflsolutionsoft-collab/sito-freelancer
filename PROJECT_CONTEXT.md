@@ -35,9 +35,8 @@ Tutto il resto è "nice to have" — Claude Code non deve proporlo spontaneament
 - `/auth` — Login/Registrazione
 
 ## Endpoint API
-[Elenco delle API routes man mano che vengono create. Es:]
-- `GET /api/users` — lista utenti
-- `POST /api/projects` — crea nuovo progetto
+- `POST /api/contatti` — invio messaggio dal form contatti (tramite Resend)
+- `POST /api/chat` — assistente AI del sito, chiama Claude Haiku 4.5 server-side. Richiede `ANTHROPIC_API_KEY` in env.
 
 [Aggiornare questa sezione ogni volta che si aggiunge un endpoint.]
 
