@@ -21,6 +21,8 @@ import {
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import JsonLd from "@/components/ui/JsonLd";
+import Reveal from "@/components/ui/Reveal";
+import CountUp from "@/components/ui/CountUp";
 import {
   professionalServiceSchema,
   personSchema,
@@ -178,6 +180,8 @@ export default function Home() {
         </div>
         <div className="animate-float absolute -right-8 top-32 h-24 w-24 rounded-full border-2 border-primary/10 md:right-16 md:h-40 md:w-40" />
         <div className="animate-float delay-300 absolute -left-4 bottom-24 h-16 w-16 rounded-full bg-accent/10 md:left-12 md:h-24 md:w-24" />
+        {/* Terza forma: alone sfumato in basso a destra per profondità */}
+        <div className="animate-pulse-soft absolute -bottom-20 right-1/4 h-56 w-56 rounded-full bg-primary/5 blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl text-center">
@@ -188,7 +192,9 @@ export default function Home() {
 
             <h1 className="animate-fade-in-up delay-100 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
               Creo siti web{" "}
-              <span className="font-display italic text-primary">su misura</span>{" "}
+              <span className="wavy-underline always-on font-display italic text-primary">
+                su misura
+              </span>{" "}
               per la tua attività
             </h1>
 
@@ -199,7 +205,12 @@ export default function Home() {
             </p>
 
             <div className="animate-fade-in-up delay-300 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button href="/contatti" size="lg" variant="accent">
+              <Button
+                href="/contatti"
+                size="lg"
+                variant="accent"
+                className="animate-glow-pulse"
+              >
                 Parliamone <ArrowRight size={18} />
               </Button>
               <Button href="/portfolio" variant="secondary" size="lg">
@@ -212,113 +223,108 @@ export default function Home() {
 
       {/* Perché un sito su misura — SECONDA SEZIONE, risponde subito all'obiezione */}
       <SectionWrapper background="surface">
-        <div className="text-center">
+        <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Pensavi di fartelo da solo?
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
             Perché un sito web su misura batte{" "}
-            <span className="font-display italic">qualsiasi template</span>
+            <span className="wavy-underline font-display italic">
+              qualsiasi template
+            </span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
             Le piattaforme fai-da-te sembrano convenienti, ma alla lunga costano
             di più e rendono di meno. Un sito web professionale per la tua
             attività a Torino o nel Canavese è un investimento che si ripaga.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {vantaggi.map((vantaggio, i) => (
-            <div
-              key={vantaggio.titolo}
-              className={`animate-fade-in-up group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
-                i === 0
-                  ? ""
-                  : i === 1
-                    ? "delay-100"
-                    : i === 2
-                      ? "delay-200"
-                      : i === 3
-                        ? "delay-100"
-                        : i === 4
-                          ? "delay-200"
-                          : "delay-300"
-              }`}
-            >
-              <div className="mb-4 flex items-center justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
-                  <vantaggio.icon size={20} />
+            <Reveal key={vantaggio.titolo} delay={(i % 3) * 120}>
+              <div className="group h-full rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="mb-4 flex items-center justify-between">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
+                    <vantaggio.icon size={20} />
+                  </div>
+                  <div className="text-right">
+                    <CountUp
+                      value={vantaggio.numero}
+                      className="text-2xl font-bold text-primary"
+                    />
+                    <p className="text-xs text-muted">{vantaggio.confronto}</p>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <span className="text-2xl font-bold text-primary">
-                    {vantaggio.numero}
-                  </span>
-                  <p className="text-xs text-muted">{vantaggio.confronto}</p>
-                </div>
+                <h3 className="font-semibold">{vantaggio.titolo}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {vantaggio.descrizione}
+                </p>
               </div>
-              <h3 className="font-semibold">{vantaggio.titolo}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {vantaggio.descrizione}
-              </p>
-            </div>
+            </Reveal>
           ))}
         </div>
-
       </SectionWrapper>
 
       {/* Problema / Soluzione */}
       <SectionWrapper background="gradient">
-        <div className="text-center">
+        <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Ti suona familiare?
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
             Ti riconosci in una di queste{" "}
-            <span className="font-display italic">situazioni?</span>
+            <span className="wavy-underline font-display italic">
+              situazioni?
+            </span>
           </h2>
           <p className="mt-3 text-lg text-muted">
             Sono problemi comuni per le attività locali. Ma hanno una soluzione.
           </p>
-        </div>
+        </Reveal>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {problemi.map((item, i) => (
-            <div
-              key={item.problema}
-              className={`animate-fade-in-up group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
-                i === 0 ? "" : i === 1 ? "delay-100" : "delay-200"
-              }`}
-            >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
-                <item.icon size={22} />
+            <Reveal key={item.problema} delay={i * 120}>
+              <div className="group h-full rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
+                  <item.icon size={22} />
+                </div>
+                <h3 className="text-lg font-semibold">{item.problema}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {item.soluzione}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold">{item.problema}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {item.soluzione}
-              </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </SectionWrapper>
 
       {/* Come lavoro */}
       <SectionWrapper>
-        <div className="text-center">
+        <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Il mio metodo
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
             Come{" "}
-            <span className="font-display italic">lavoro</span>
+            <span className="wavy-underline font-display italic">lavoro</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
             Prima di scrivere una riga di codice, studio la tua attività
             e il mercato locale a Torino. Così il sito web non è bello e
             basta — è costruito per far funzionare la tua attività online.
           </p>
-        </div>
+        </Reveal>
         <div className="relative mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Linea connettore (desktop) */}
-          <div className="absolute left-0 right-0 top-10 hidden h-0.5 bg-gradient-to-r from-transparent via-border to-transparent lg:block" />
+          {/* Linea connettore (desktop) — si disegna al reveal */}
+          <Reveal
+            direction="scalex"
+            duration={1200}
+            delay={200}
+            className="absolute left-0 right-0 top-10 hidden h-0.5 bg-gradient-to-r from-transparent via-border to-transparent lg:block"
+          >
+            <span className="sr-only">Linea connettore</span>
+          </Reveal>
 
           {[
             {
@@ -346,199 +352,208 @@ export default function Home() {
                 "Il sito va online con una dashboard per gestirlo e lavora in automatico anche quando tu non ci sei.",
             },
           ].map((item, i) => (
-            <div
+            <Reveal
               key={item.step}
-              className={`animate-fade-in-up relative text-center ${
-                i === 1
-                  ? "delay-100"
-                  : i === 2
-                    ? "delay-200"
-                    : i === 3
-                      ? "delay-300"
-                      : ""
-              }`}
+              delay={i * 150}
+              className="relative text-center"
             >
-              <div className="relative mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-lg shadow-primary/20">
+              <div className="relative mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-lg shadow-primary/20 transition-transform duration-300 hover:scale-105">
                 <span className="text-2xl font-bold">{item.step}</span>
               </div>
               <h3 className="text-lg font-semibold">{item.titolo}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 {item.descrizione}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </SectionWrapper>
 
       {/* Servizi preview */}
       <SectionWrapper background="surface">
-        <div className="text-center">
+        <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Cosa posso fare per te
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
             Soluzioni per ogni{" "}
-            <span className="font-display italic">esigenza</span>
+            <span className="wavy-underline font-display italic">
+              esigenza
+            </span>
           </h2>
           <p className="mt-3 text-lg text-muted">
             Dai siti vetrina ai gestionali su misura. Prezzi trasparenti, senza sorprese.
           </p>
-        </div>
+        </Reveal>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {servizi.map((servizio, i) => (
-            <div
-              key={servizio.nome}
-              className={`group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
-                i === 1 ? "ring-2 ring-accent/30 lg:-translate-y-2" : ""
-              }`}
-            >
-              {i === 1 && (
-                <span className="mb-3 inline-block w-fit rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white">
-                  Più richiesto
-                </span>
-              )}
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20">
-                <servizio.icon size={22} />
-              </div>
-              <h3 className="text-lg font-semibold">{servizio.nome}</h3>
-              {servizio.prezzo ? (
-                <p className="mt-1 text-2xl font-bold">
-                  <span className="text-sm font-normal text-muted">
-                    a partire da{" "}
-                  </span>
-                  <span className="text-primary">€{servizio.prezzo}</span>
-                </p>
-              ) : (
-                <p className="mt-1 text-2xl font-bold text-primary">
-                  Su preventivo
-                </p>
-              )}
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-                {servizio.descrizione}
-              </p>
-              <a
-                href={servizio.href}
-                className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary-dark"
+            <Reveal key={servizio.nome} delay={i * 100}>
+              <div
+                className={`group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                  i === 1 ? "ring-2 ring-accent/30 lg:-translate-y-2" : ""
+                }`}
               >
-                Scopri di più{" "}
-                <ArrowRight
-                  size={14}
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </a>
-            </div>
+                {i === 1 && (
+                  <span className="mb-3 inline-block w-fit rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white">
+                    Più richiesto
+                  </span>
+                )}
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
+                  <servizio.icon size={22} />
+                </div>
+                <h3 className="text-lg font-semibold">{servizio.nome}</h3>
+                {servizio.prezzo ? (
+                  <p className="mt-1 text-2xl font-bold">
+                    <span className="text-sm font-normal text-muted">
+                      a partire da{" "}
+                    </span>
+                    <span className="text-primary">€{servizio.prezzo}</span>
+                  </p>
+                ) : (
+                  <p className="mt-1 text-2xl font-bold text-primary">
+                    Su preventivo
+                  </p>
+                )}
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                  {servizio.descrizione}
+                </p>
+                <a
+                  href={servizio.href}
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary-dark"
+                >
+                  Scopri di più{" "}
+                  <ArrowRight
+                    size={14}
+                    className="transition-transform group-hover:translate-x-1"
+                  />
+                </a>
+              </div>
+            </Reveal>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <Reveal delay={200} className="mt-10 text-center">
           <Button href="/servizi" variant="outline">
             Vedi tutti i servizi
           </Button>
-        </div>
+        </Reveal>
       </SectionWrapper>
 
       {/* Portfolio snippet */}
       <SectionWrapper background="surface">
-        <div className="text-center">
+        <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Portfolio
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
             Lavori{" "}
-            <span className="font-display italic">realizzati</span>
+            <span className="wavy-underline font-display italic">
+              realizzati
+            </span>
           </h2>
           <p className="mt-3 text-lg text-muted">
             Siti web e web app realizzati per attività locali a Torino e nel Canavese.
           </p>
-        </div>
+        </Reveal>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <a
-            href="/portfolio"
-            className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-          >
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="/images/doppiouno.webp"
-                alt="Screenshot del sito Doppio Uno — ludoteca e associazione ludica"
-                fill
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />
-            </div>
-            <div className="p-6">
-              <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                Web app gestionale
-              </span>
-              <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-primary">
-                Doppio Uno — Ludoteca
-              </h3>
-              <p className="mt-1 text-sm text-muted">
-                Web app gestionale con catalogo giochi, prenotazione tavoli,
-                gestione eventi e dashboard admin multi-ruolo per
-                un&apos;associazione ludica.
-              </p>
-            </div>
-          </a>
+          <Reveal delay={0}>
+            <a
+              href="/portfolio"
+              className="group block overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="reveal-zoom relative aspect-video overflow-hidden">
+                <Image
+                  src="/images/doppiouno.webp"
+                  alt="Screenshot del sito Doppio Uno — ludoteca e associazione ludica"
+                  fill
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />
+              </div>
+              <div className="p-6">
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  Web app gestionale
+                </span>
+                <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-primary">
+                  Doppio Uno — Ludoteca
+                </h3>
+                <p className="mt-1 text-sm text-muted">
+                  Web app gestionale con catalogo giochi, prenotazione tavoli,
+                  gestione eventi e dashboard admin multi-ruolo per
+                  un&apos;associazione ludica.
+                </p>
+              </div>
+            </a>
+          </Reveal>
 
-          <a
-            href="/portfolio"
-            className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-          >
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="/images/danordasud.webp"
-                alt="Screenshot del sito Danorasud — home restaurant a Rivarolo Canavese"
-                fill
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />
-            </div>
-            <div className="p-6">
-              <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                Vetrina + prenotazioni + pagamenti
-              </span>
-              <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-primary">
-                Danorasud — Home restaurant
-              </h3>
-              <p className="mt-1 text-sm text-muted">
-                Sito con calendario serate, prenotazione online e pagamento
-                integrato per un home restaurant.
-              </p>
-            </div>
-          </a>
+          <Reveal delay={150}>
+            <a
+              href="/portfolio"
+              className="group block overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="reveal-zoom relative aspect-video overflow-hidden">
+                <Image
+                  src="/images/danordasud.webp"
+                  alt="Screenshot del sito Danorasud — home restaurant a Rivarolo Canavese"
+                  fill
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/5" />
+              </div>
+              <div className="p-6">
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  Vetrina + prenotazioni + pagamenti
+                </span>
+                <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-primary">
+                  Danorasud — Home restaurant
+                </h3>
+                <p className="mt-1 text-sm text-muted">
+                  Sito con calendario serate, prenotazione online e pagamento
+                  integrato per un home restaurant.
+                </p>
+              </div>
+            </a>
+          </Reveal>
         </div>
-        <div className="mt-10 text-center">
+        <Reveal delay={200} className="mt-10 text-center">
           <Button href="/portfolio" variant="outline">
             Vedi il portfolio completo
           </Button>
-        </div>
+        </Reveal>
       </SectionWrapper>
 
       {/* CTA finale */}
       <SectionWrapper>
-        <div className="relative overflow-hidden rounded-3xl bg-foreground px-6 py-14 text-center text-white sm:px-12 sm:py-20">
-          <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
-          <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-accent/15 blur-3xl" />
-          <div className="absolute right-8 top-8 h-20 w-20 rounded-full border border-white/10 md:h-32 md:w-32" />
+        <Reveal>
+          <div className="relative overflow-hidden rounded-3xl bg-foreground px-6 py-14 text-center text-white sm:px-12 sm:py-20">
+            <div className="animate-pulse-soft absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
+            <div className="animate-pulse-soft absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-accent/15 blur-3xl" />
+            <div className="animate-float absolute right-8 top-8 h-20 w-20 rounded-full border border-white/10 md:h-32 md:w-32" />
 
-          <div className="relative">
-            <h2 className="font-display text-4xl italic sm:text-5xl">
-              Hai un&apos;attività a Torino o nel Canavese?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
-              Raccontami cosa fai e insieme creiamo il sito web perfetto per
-              la tua attività. Lavoro con ristoranti, parrucchieri, centri
-              estetici, B&amp;B e tante altre attività locali. La prima
-              consulenza è gratuita e senza impegno.
-            </p>
-            <div className="mt-10">
-              <Button href="/contatti" size="lg" variant="accent">
-                Scrivimi ora <ArrowRight size={18} />
-              </Button>
+            <div className="relative">
+              <h2 className="font-display text-4xl italic sm:text-5xl">
+                Hai un&apos;attività a Torino o nel Canavese?
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
+                Raccontami cosa fai e insieme creiamo il sito web perfetto per
+                la tua attività. Lavoro con ristoranti, parrucchieri, centri
+                estetici, B&amp;B e tante altre attività locali. La prima
+                consulenza è gratuita e senza impegno.
+              </p>
+              <div className="mt-10">
+                <Button
+                  href="/contatti"
+                  size="lg"
+                  variant="accent"
+                  className="animate-glow-pulse"
+                >
+                  Scrivimi ora <ArrowRight size={18} />
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </SectionWrapper>
     </>
   );

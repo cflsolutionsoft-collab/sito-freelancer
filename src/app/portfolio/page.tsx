@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import JsonLd from "@/components/ui/JsonLd";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Reveal from "@/components/ui/Reveal";
 import { breadcrumbSchema, portfolioItemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -104,14 +105,16 @@ export default function Portfolio() {
         </div>
         <div className="relative mx-auto max-w-3xl text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Portfolio" }]} />
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+          <p className="animate-fade-in-up text-sm font-semibold uppercase tracking-wider text-accent">
             Portfolio
           </p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="animate-fade-in-up delay-100 mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
             Siti web{" "}
-            <span className="font-display italic text-primary">realizzati</span>
+            <span className="wavy-underline always-on font-display italic text-primary">
+              realizzati
+            </span>
           </h1>
-          <p className="mt-4 text-lg text-muted">
+          <p className="animate-fade-in-up delay-200 mt-4 text-lg text-muted">
             Siti web e web app gestionali realizzati per attività locali a Torino
             e nel Canavese. Ogni progetto è costruito su misura per risolvere
             problemi concreti.
@@ -123,13 +126,13 @@ export default function Portfolio() {
       <SectionWrapper background="surface">
         <div className="space-y-16">
           {progetti.map((progetto, i) => (
+            <Reveal key={progetto.id} delay={i * 100}>
             <article
-              key={progetto.id}
-              className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-xl"
+              className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               {/* Screenshot */}
               <div
-                className={`relative aspect-video overflow-hidden bg-gradient-to-br ${progetto.colore}`}
+                className={`reveal-zoom relative aspect-video overflow-hidden bg-gradient-to-br ${progetto.colore}`}
               >
                 {progetto.immagine ? (
                   <Image
@@ -199,7 +202,7 @@ export default function Portfolio() {
                   {progetto.tecnologie.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted"
+                      className="rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted transition-colors hover:border-primary/40 hover:bg-primary-light hover:text-primary"
                     >
                       {tech}
                     </span>
@@ -207,35 +210,48 @@ export default function Portfolio() {
                 </div>
               </div>
             </article>
+            </Reveal>
           ))}
         </div>
       </SectionWrapper>
 
       {/* CTA */}
       <SectionWrapper>
-        <div className="relative overflow-hidden rounded-3xl bg-foreground px-6 py-14 text-center text-white sm:px-12 sm:py-20">
-          <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
-          <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-accent/15 blur-3xl" />
-          <div className="absolute right-12 top-12 h-24 w-24 rounded-full border border-white/10" />
+        <Reveal>
+          <div className="relative overflow-hidden rounded-3xl bg-foreground px-6 py-14 text-center text-white sm:px-12 sm:py-20">
+            <div className="animate-pulse-soft absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
+            <div className="animate-pulse-soft absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-accent/15 blur-3xl" />
+            <div className="animate-float absolute right-12 top-12 h-24 w-24 rounded-full border border-white/10" />
 
-          <div className="relative">
-            <h2 className="font-display text-4xl italic sm:text-5xl">
-              Vuoi un risultato simile?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
-              Raccontami la tua attività e insieme realizziamo il sito web
-              perfetto per te. La prima consulenza è gratuita.
-            </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button href="/contatti" size="lg" variant="accent">
-                Contattami <ArrowRight size={18} />
-              </Button>
-              <Button href="/servizi" size="lg" variant="secondary" className="border-white/20 text-white hover:bg-white/10 hover:text-white">
-                Vedi i servizi
-              </Button>
+            <div className="relative">
+              <h2 className="font-display text-4xl italic sm:text-5xl">
+                Vuoi un risultato simile?
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
+                Raccontami la tua attività e insieme realizziamo il sito web
+                perfetto per te. La prima consulenza è gratuita.
+              </p>
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Button
+                  href="/contatti"
+                  size="lg"
+                  variant="accent"
+                  className="animate-glow-pulse"
+                >
+                  Contattami <ArrowRight size={18} />
+                </Button>
+                <Button
+                  href="/servizi"
+                  size="lg"
+                  variant="secondary"
+                  className="border-white/20 text-white hover:bg-white/10 hover:text-white"
+                >
+                  Vedi i servizi
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </SectionWrapper>
     </>
   );

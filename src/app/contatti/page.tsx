@@ -7,6 +7,7 @@ import { Mail, MessageCircle, MapPin, Clock, Send, CheckCircle } from "lucide-re
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Reveal from "@/components/ui/Reveal";
 
 export default function Contatti() {
   const [invio, setInvio] = useState<"idle" | "invio" | "successo" | "errore">(
@@ -64,14 +65,16 @@ export default function Contatti() {
         </div>
         <div className="relative mx-auto max-w-3xl text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Contatti" }]} />
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+          <p className="animate-fade-in-up text-sm font-semibold uppercase tracking-wider text-accent">
             Contatti
           </p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="animate-fade-in-up delay-100 mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
             Parliamo del tuo{" "}
-            <span className="font-display italic text-primary">progetto</span>
+            <span className="wavy-underline always-on font-display italic text-primary">
+              progetto
+            </span>
           </h1>
-          <p className="mt-4 text-lg text-muted">
+          <p className="animate-fade-in-up delay-200 mt-4 text-lg text-muted">
             Cerchi un web designer freelance a Torino o nel Canavese? Scrivimi
             per raccontarmi la tua idea. Rispondo entro 24 ore e la prima
             consulenza è gratuita.
@@ -83,7 +86,7 @@ export default function Contatti() {
       <SectionWrapper background="surface">
         <div className="grid gap-10 lg:grid-cols-3">
           {/* Form */}
-          <div className="lg:col-span-2">
+          <Reveal direction="right" className="lg:col-span-2">
             <div className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
               {invio === "successo" ? (
                 <div className="animate-fade-in-up py-12 text-center">
@@ -191,7 +194,7 @@ export default function Contatti() {
                     type="submit"
                     size="lg"
                     variant="accent"
-                    className="w-full"
+                    className="w-full animate-glow-pulse"
                     disabled={invio === "invio"}
                   >
                     {invio === "invio" ? (
@@ -216,12 +219,13 @@ export default function Contatti() {
                 </form>
               )}
             </div>
-          </div>
+          </Reveal>
 
           {/* Sidebar */}
           <div className="space-y-4">
+            <Reveal direction="left" delay={0}>
             {/* WhatsApp */}
-            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-green-100">
                   <MessageCircle size={20} className="text-green-600" />
@@ -240,9 +244,11 @@ export default function Contatti() {
                 Scrivimi su WhatsApp
               </a>
             </div>
+            </Reveal>
 
+            <Reveal direction="left" delay={100}>
             {/* Email */}
-            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-light">
                   <Mail size={20} className="text-primary" />
@@ -258,9 +264,11 @@ export default function Contatti() {
                 </div>
               </div>
             </div>
+            </Reveal>
 
+            <Reveal direction="left" delay={200}>
             {/* Zona servita */}
-            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-light">
                   <MapPin size={20} className="text-primary" />
@@ -275,9 +283,11 @@ export default function Contatti() {
                 Per i progetti online, lavoro anche con attività in tutta Italia.
               </p>
             </div>
+            </Reveal>
 
+            <Reveal direction="left" delay={300}>
             {/* Tempi di risposta */}
-            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-light">
                   <Clock size={20} className="text-accent" />
@@ -288,6 +298,7 @@ export default function Contatti() {
                 </div>
               </div>
             </div>
+            </Reveal>
           </div>
         </div>
       </SectionWrapper>

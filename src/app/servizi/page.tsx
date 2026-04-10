@@ -17,6 +17,7 @@ import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import JsonLd from "@/components/ui/JsonLd";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Reveal from "@/components/ui/Reveal";
 import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -224,14 +225,16 @@ export default function Servizi() {
         </div>
         <div className="relative mx-auto max-w-3xl text-center">
           <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Servizi" }]} />
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">
+          <p className="animate-fade-in-up text-sm font-semibold uppercase tracking-wider text-accent">
             Servizi
           </p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="animate-fade-in-up delay-100 mt-2 text-4xl font-bold tracking-tight sm:text-5xl">
             Realizzazione siti web a{" "}
-            <span className="font-display italic text-primary">Torino e in Canavese</span>
+            <span className="wavy-underline always-on font-display italic text-primary">
+              Torino e in Canavese
+            </span>
           </h1>
-          <p className="mt-4 text-lg text-muted">
+          <p className="animate-fade-in-up delay-200 mt-4 text-lg text-muted">
             Siti web professionali costruiti su misura per piccole attività
             e liberi professionisti. Prezzi chiari e trasparenti, senza sorprese.
           </p>
@@ -240,20 +243,22 @@ export default function Servizi() {
 
       {/* Come lavoro — versione dettagliata */}
       <SectionWrapper>
-        <div className="text-center">
+        <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Il mio metodo
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
             Come nasce il tuo{" "}
-            <span className="font-display italic">progetto</span>
+            <span className="wavy-underline font-display italic">
+              progetto
+            </span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">
             Che sia un sito web o una web app gestionale, ogni progetto
             segue un percorso strutturato. Niente improvvisazione — solo
             un metodo collaudato che porta a risultati concreti.
           </p>
-        </div>
+        </Reveal>
         <div className="mt-12 space-y-6">
           {[
             {
@@ -281,22 +286,27 @@ export default function Servizi() {
                 "Il sito va online con una dashboard personalizzata per gestirlo in autonomia. Ma non è un sito statico: lavora per te in automatico — invia email di conferma, manda notifiche quando serve, raccoglie contatti anche mentre dormi. Il primo anno di manutenzione è incluso.",
             },
           ].map((item, i) => (
-            <div
+            <Reveal
               key={item.step}
-              className={`group flex gap-6 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-primary/20 hover:shadow-md sm:p-8 ${
-                i % 2 === 1 ? "sm:flex-row-reverse sm:text-right" : ""
-              }`}
+              direction={i % 2 === 0 ? "right" : "left"}
+              delay={i * 100}
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20">
-                <span className="text-xl font-bold">{item.step}</span>
+              <div
+                className={`group flex gap-6 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-primary/20 hover:shadow-md sm:p-8 ${
+                  i % 2 === 1 ? "sm:flex-row-reverse sm:text-right" : ""
+                }`}
+              >
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
+                  <span className="text-xl font-bold">{item.step}</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">{item.titolo}</h3>
+                  <p className="mt-2 leading-relaxed text-muted">
+                    {item.descrizione}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold">{item.titolo}</h3>
-                <p className="mt-2 leading-relaxed text-muted">
-                  {item.descrizione}
-                </p>
-              </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </SectionWrapper>
@@ -304,11 +314,11 @@ export default function Servizi() {
       {/* Pacchetti */}
       <SectionWrapper background="surface">
         <div className="grid gap-8 lg:grid-cols-2">
-          {pacchetti.map((pkg) => (
+          {pacchetti.map((pkg, i) => (
+            <Reveal key={pkg.id} delay={(i % 2) * 150}>
             <div
-              key={pkg.id}
               id={pkg.id}
-              className={`group flex flex-col rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:shadow-lg sm:p-8 ${
+              className={`group flex h-full flex-col rounded-2xl border p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8 ${
                 pkg.evidenziato
                   ? "border-accent/30 bg-card ring-2 ring-accent/20"
                   : "border-border bg-card hover:border-primary/20"
@@ -356,11 +366,12 @@ export default function Servizi() {
               <Button
                 href="/contatti"
                 variant={pkg.evidenziato ? "accent" : "outline"}
-                className="mt-6 w-full"
+                className={`mt-6 w-full ${pkg.evidenziato ? "animate-glow-pulse" : ""}`}
               >
                 Richiedi preventivo <ArrowRight size={16} />
               </Button>
             </div>
+            </Reveal>
           ))}
         </div>
       </SectionWrapper>
@@ -368,22 +379,25 @@ export default function Servizi() {
       {/* Visibilità su Google — inclusa */}
       <SectionWrapper background="gradient">
         <div className="mx-auto max-w-3xl">
-          <div className="text-center">
+          <Reveal className="text-center">
             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20">
               <Search size={24} />
             </div>
             <h2 className="text-3xl font-bold sm:text-4xl">
               Ottimizzazione per Google?{" "}
-              <span className="font-display italic">Già inclusa.</span>
+              <span className="wavy-underline font-display italic">
+                Già inclusa.
+              </span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
               Molti web designer ti fanno pagare l&apos;ottimizzazione per
               Google come servizio extra. Io la includo in ogni sito, senza
               costi aggiuntivi.
             </p>
-          </div>
+          </Reveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+            <Reveal direction="right">
+            <div className="h-full rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
               <h3 className="font-semibold">Cosa significa in pratica?</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 Nessuno può promettere il primo posto su Google — chi lo fa
@@ -393,7 +407,9 @@ export default function Servizi() {
                 servizio come il tuo.
               </p>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+            </Reveal>
+            <Reveal direction="left" delay={100}>
+            <div className="h-full rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
               <h3 className="font-semibold">Cosa è incluso in ogni sito?</h3>
               <ul className="mt-2 space-y-2 text-sm text-muted">
                 <li className="flex items-start gap-2">
@@ -418,10 +434,11 @@ export default function Servizi() {
                 </li>
               </ul>
             </div>
+            </Reveal>
           </div>
 
           {/* Spiegazione segnalazione Google */}
-          <div className="mx-auto mt-6 max-w-3xl rounded-2xl border border-primary/20 bg-primary-light/50 p-6">
+          <Reveal delay={150} className="mx-auto mt-6 max-w-3xl rounded-2xl border border-primary/20 bg-primary-light/50 p-6">
             <p className="text-sm leading-relaxed text-foreground">
               <span className="font-semibold">Cosa significa segnalare il sito a Google?</span>{" "}
               Dopo il lancio configuro insieme a te Google Search Console
@@ -431,26 +448,28 @@ export default function Servizi() {
               viene notato da Google più rapidamente e inizia a comparire
               nelle ricerche del tuo territorio.
             </p>
-          </div>
+          </Reveal>
         </div>
       </SectionWrapper>
 
       {/* Confronto con piattaforme fai-da-te */}
       <SectionWrapper>
-        <div className="mx-auto max-w-3xl text-center">
+        <Reveal className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent">
             Il confronto
           </p>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
             Perché non un sito{" "}
-            <span className="font-display italic">fai-da-te?</span>
+            <span className="wavy-underline font-display italic">
+              fai-da-te?
+            </span>
           </h2>
           <p className="mt-3 text-lg text-muted">
             Con una piattaforma a template hai un sito generico. Con un web
             designer freelance hai un sito web costruito su misura che lavora per te.
           </p>
-        </div>
-        <div className="mt-12 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
+        </Reveal>
+        <Reveal className="mt-12 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
           <table className="w-full min-w-[600px] text-left text-sm">
             <thead>
               <tr className="border-b border-border bg-surface">
@@ -486,20 +505,22 @@ export default function Servizi() {
               ))}
             </tbody>
           </table>
-        </div>
+        </Reveal>
 
         {/* Cosa ottieni davvero — confronto di valore */}
-        <div className="mx-auto mt-16 max-w-3xl text-center">
+        <Reveal className="mx-auto mt-16 max-w-3xl text-center">
           <h3 className="text-2xl font-bold sm:text-3xl">
             Ma a parità di spesa, cosa{" "}
-            <span className="font-display italic">ottieni davvero?</span>
+            <span className="wavy-underline font-display italic">
+              ottieni davvero?
+            </span>
           </h3>
           <p className="mt-3 text-muted">
             Una piattaforma fai-da-te ti dà uno strumento. Io ti consegno un
             risultato finito.
           </p>
-        </div>
-        <div className="mt-8 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
+        </Reveal>
+        <Reveal className="mt-8 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
           <table className="w-full min-w-[600px] text-left text-sm">
             <thead>
               <tr className="border-b border-border bg-surface">
@@ -535,29 +556,32 @@ export default function Servizi() {
               ))}
             </tbody>
           </table>
-        </div>
+        </Reveal>
       </SectionWrapper>
 
       {/* Manutenzione */}
       <SectionWrapper background="surface">
         <div className="mx-auto max-w-3xl">
-          <div className="text-center">
+          <Reveal className="text-center">
             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white shadow-md shadow-primary/20">
               <Wrench size={24} />
             </div>
             <h2 className="text-3xl font-bold sm:text-4xl">
               Manutenzione{" "}
-              <span className="font-display italic">inclusa</span>
+              <span className="wavy-underline font-display italic">
+                inclusa
+              </span>
             </h2>
             <p className="mt-3 text-lg text-muted">
               Non ti lascio solo dopo la consegna. Il primo anno è compreso nel
               prezzo.
             </p>
-          </div>
+          </Reveal>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {/* Primo anno */}
-            <div className="rounded-2xl border border-accent/30 bg-card p-6 ring-2 ring-accent/20 transition-shadow hover:shadow-lg">
+            <Reveal direction="right">
+            <div className="h-full rounded-2xl border border-accent/30 bg-card p-6 ring-2 ring-accent/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <span className="inline-block rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white">
                 Incluso
               </span>
@@ -599,9 +623,11 @@ export default function Servizi() {
                 </li>
               </ul>
             </div>
+            </Reveal>
 
             {/* Dal secondo anno */}
-            <div className="rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-lg">
+            <Reveal direction="left" delay={100}>
+            <div className="h-full rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <p className="mt-3 text-sm font-semibold text-muted">
                 Dal secondo anno
               </p>
@@ -639,6 +665,7 @@ export default function Servizi() {
                 </li>
               </ul>
             </div>
+            </Reveal>
           </div>
         </div>
       </SectionWrapper>
@@ -646,19 +673,21 @@ export default function Servizi() {
       {/* FAQ */}
       <SectionWrapper>
         <div className="mx-auto max-w-3xl">
-          <div className="text-center">
+          <Reveal className="text-center">
             <p className="text-sm font-semibold uppercase tracking-wider text-accent">
               FAQ
             </p>
             <h2 className="mt-2 text-3xl font-bold sm:text-4xl">
               Domande{" "}
-              <span className="font-display italic">frequenti</span>
+              <span className="wavy-underline font-display italic">
+                frequenti
+              </span>
             </h2>
-          </div>
+          </Reveal>
           <div className="mt-10 space-y-3">
-            {faq.map((item) => (
+            {faq.map((item, i) => (
+              <Reveal key={item.domanda} delay={i * 60}>
               <details
-                key={item.domanda}
                 className="group rounded-2xl border border-border bg-card transition-shadow hover:shadow-sm"
               >
                 <summary className="flex cursor-pointer items-center justify-between p-5 font-medium">
@@ -672,6 +701,7 @@ export default function Servizi() {
                   {item.risposta}
                 </p>
               </details>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -679,28 +709,40 @@ export default function Servizi() {
 
       {/* CTA */}
       <SectionWrapper background="surface">
-        <div className="relative overflow-hidden rounded-3xl bg-foreground px-6 py-14 text-center text-white sm:px-12 sm:py-20">
-          <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
-          <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-accent/15 blur-3xl" />
+        <Reveal>
+          <div className="relative overflow-hidden rounded-3xl bg-foreground px-6 py-14 text-center text-white sm:px-12 sm:py-20">
+            <div className="animate-pulse-soft absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
+            <div className="animate-pulse-soft absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-accent/15 blur-3xl" />
 
-          <div className="relative">
-            <h2 className="font-display text-4xl italic sm:text-5xl">
-              Non sai quale pacchetto fa per te?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
-              Scrivimi e ne parliamo insieme, senza impegno. Ti aiuto a
-              scegliere il sito web giusto per la tua attività a Torino o nel Canavese.
-            </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button href="/contatti" size="lg" variant="accent">
-                Contattami <ArrowRight size={18} />
-              </Button>
-              <Button href="/portfolio" size="lg" variant="secondary" className="border-white/20 text-white hover:bg-white/10 hover:text-white">
-                Vedi i lavori realizzati
-              </Button>
+            <div className="relative">
+              <h2 className="font-display text-4xl italic sm:text-5xl">
+                Non sai quale pacchetto fa per te?
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-lg text-slate-300">
+                Scrivimi e ne parliamo insieme, senza impegno. Ti aiuto a
+                scegliere il sito web giusto per la tua attività a Torino o nel Canavese.
+              </p>
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Button
+                  href="/contatti"
+                  size="lg"
+                  variant="accent"
+                  className="animate-glow-pulse"
+                >
+                  Contattami <ArrowRight size={18} />
+                </Button>
+                <Button
+                  href="/portfolio"
+                  size="lg"
+                  variant="secondary"
+                  className="border-white/20 text-white hover:bg-white/10 hover:text-white"
+                >
+                  Vedi i lavori realizzati
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </SectionWrapper>
     </>
   );
