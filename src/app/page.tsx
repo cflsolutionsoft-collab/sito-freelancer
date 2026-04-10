@@ -127,7 +127,7 @@ const servizi = [
   {
     icon: Globe,
     nome: "Sito Vetrina",
-    prezzo: "500",
+    prezzo: "300",
     descrizione:
       "La tua presenza online professionale. Ideale per ristoranti, parrucchieri, artigiani e studi professionali. Veloce, ottimizzato per Google e pronto per ricevere contatti.",
     href: "/servizi#vetrina",

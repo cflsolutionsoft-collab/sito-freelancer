@@ -23,14 +23,14 @@ import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Servizi",
   description:
-    "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino e in Canavese. Prezzi trasparenti a partire da €500.",
+    "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino e in Canavese. Prezzi trasparenti a partire da €300.",
   alternates: {
     canonical: "https://fabioregnaud.it/servizi",
   },
   openGraph: {
     title: "Servizi — Fabio Regnaud",
     description:
-      "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino e in Canavese. Prezzi trasparenti a partire da €500.",
+      "Siti vetrina, sistemi di prenotazione ed e-commerce su misura per piccole attività a Torino e in Canavese. Prezzi trasparenti a partire da €300.",
     url: "https://fabioregnaud.it/servizi",
   },
 };
@@ -42,7 +42,7 @@ const pacchetti = [
     id: "vetrina",
     icon: Globe,
     nome: "Sito Vetrina",
-    prezzo: "500",
+    prezzo: "300",
     descrizione:
       "La tua presenza online professionale, veloce e ottimizzata per Google.",
     ideale:

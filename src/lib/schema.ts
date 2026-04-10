@@ -91,9 +91,9 @@ export function professionalServiceSchema() {
           },
           priceSpecification: {
             "@type": "PriceSpecification",
-            price: "500",
+            price: "300",
             priceCurrency: "EUR",
-            minPrice: "500",
+            minPrice: "300",
           },
         },
         {
