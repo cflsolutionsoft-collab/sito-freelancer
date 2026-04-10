@@ -62,6 +62,9 @@ export async function POST(request: Request) {
     }
 
     // Validazione ogni singolo messaggio.
+    // Nota: il limite di lunghezza si applica solo ai messaggi dell'utente.
+    // Le risposte dell'assistente sono gia' limitate da max_tokens nella chiamata
+    // API e rimangono nella cronologia inviata ad ogni turno successivo.
     for (const msg of body.messages) {
       if (msg.role !== "user" && msg.role !== "assistant") {
         return NextResponse.json(
@@ -75,10 +78,10 @@ export async function POST(request: Request) {
           { status: 400 }
         );
       }
-      if (msg.content.length > MAX_MESSAGE_LENGTH) {
+      if (msg.role === "user" && msg.content.length > MAX_MESSAGE_LENGTH) {
         return NextResponse.json(
           {
-            error: `Messaggio troppo lungo (max ${MAX_MESSAGE_LENGTH} caratteri).`,
+            error: `Il tuo messaggio e' troppo lungo (max ${MAX_MESSAGE_LENGTH} caratteri).`,
           },
           { status: 400 }
         );
