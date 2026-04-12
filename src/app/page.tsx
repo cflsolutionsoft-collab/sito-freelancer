@@ -98,7 +98,7 @@ const vantaggi = [
     numero: "∞",
     confronto: "possibilità",
     descrizione:
-      "Parti con un sito vetrina, poi aggiungi prenotazioni o e-commerce quando servono. Con un builder sei vincolato ai limiti della piattaforma.",
+      "Parti con un sito vetrina, poi aggiungi prenotazioni, e-commerce o un assistente AI quando servono. Con un builder sei vincolato ai limiti della piattaforma.",
   },
 ];
 
@@ -494,7 +494,7 @@ export default function Home() {
               <div className="reveal-zoom relative aspect-video overflow-hidden">
                 <Image
                   src="/images/danordasud.webp"
-                  alt="Screenshot del sito Danorasud — home restaurant a Rivarolo Canavese"
+                  alt="Screenshot del sito Danordasud — home restaurant a Rivarolo Canavese"
                   fill
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -506,7 +506,7 @@ export default function Home() {
                   Vetrina + prenotazioni + pagamenti
                 </span>
                 <h3 className="mt-1 text-lg font-semibold transition-colors group-hover:text-primary">
-                  Danorasud — Home restaurant
+                  Danordasud — Home restaurant
                 </h3>
                 <p className="mt-1 text-sm text-muted">
                   Sito con calendario serate, prenotazione online e pagamento

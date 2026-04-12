@@ -53,8 +53,8 @@ const progetti = [
     colore: "from-amber-500/10 to-orange-500/10",
   },
   {
-    id: "danorasud",
-    nome: "Danorasud",
+    id: "danordasud",
+    nome: "Danordasud",
     tipo: "Vetrina + prenotazioni + pagamenti — Rivarolo Canavese",
     descrizione:
       "Piattaforma completa per un home restaurant a Rivarolo Canavese. I clienti consultano il calendario delle serate, prenotano il proprio posto con un flusso guidato e pagano direttamente online. Il sito lavora in automatico: invia email di conferma ai clienti, notifica lo chef ad ogni nuova prenotazione e aggiorna la disponibilità in tempo reale. Lo chef gestisce tutto da una dashboard dedicata.",

@@ -17,7 +17,7 @@ interface ChatMessage {
 
 // Messaggio di benvenuto mostrato quando si apre la chat.
 const WELCOME_MESSAGE =
-  "Ciao! Sono l'assistente di Fabio. Posso aiutarti a capire se un sito su misura fa per te. Chiedimi quello che vuoi.";
+  "Ciao! Sono l'assistente AI di Fabio — uno degli strumenti che può integrare anche nel tuo sito. Posso aiutarti a capire se un sito su misura fa per te: chiedimi quello che vuoi.";
 
 // Limite caratteri messaggio utente (deve coincidere con MAX_MESSAGE_LENGTH nella route).
 const MAX_INPUT_LENGTH = 500;

@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, Cpu, Heart, Code, Lightbulb } from "lucide-react";
+import { ArrowRight, Sparkles, Heart, Code, Lightbulb } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import JsonLd from "@/components/ui/JsonLd";
@@ -168,10 +168,10 @@ export default function ChiSono() {
                 "Costruire soluzioni che funzionano davvero. La parte che preferisco? Vedere il volto del cliente quando il suo sito va online.",
             },
             {
-              icon: Cpu,
-              titolo: "IoT e robotica",
+              icon: Sparkles,
+              titolo: "AI e automazioni",
               testo:
-                "Realizzo progetti con Arduino, ESP32 e schede elettroniche. È la stessa curiosità del Commodore 64 — capire come funzionano le cose e costruirne di nuove.",
+                "Integro l'intelligenza artificiale nei progetti: assistenti virtuali, risposte automatiche, generazione di contenuti. Tecnologia utile, che risolve problemi veri — non gadget.",
             },
             {
               icon: Lightbulb,
