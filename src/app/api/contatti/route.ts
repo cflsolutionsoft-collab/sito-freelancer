@@ -15,6 +15,7 @@ interface ContattoBody {
   email: string;
   attivita?: string;
   messaggio: string;
+  privacy: boolean; // consenso informativa privacy
   website?: string; // campo honeypot
 }
 
@@ -43,7 +44,16 @@ export async function POST(request: Request) {
       );
     }
 
+    // Consenso privacy obbligatorio
+    if (!body.privacy) {
+      return NextResponse.json(
+        { error: "È necessario accettare l'informativa privacy." },
+        { status: 400 }
+      );
+    }
+
     const { nome, email, attivita, messaggio } = body;
+    const consensoTimestamp = new Date().toISOString();
 
     // Email di notifica a Fabio
     const notifica = await resend.emails.send({
@@ -58,6 +68,8 @@ export async function POST(request: Request) {
         ${attivita ? `<p><strong>Tipo di attività:</strong> ${escapeHtml(attivita)}</p>` : ""}
         <p><strong>Messaggio:</strong></p>
         <p>${escapeHtml(messaggio).replace(/\n/g, "<br>")}</p>
+        <hr>
+        <p style="font-size:12px;color:#666">Consenso privacy prestato il ${consensoTimestamp}</p>
       `,
     });
 

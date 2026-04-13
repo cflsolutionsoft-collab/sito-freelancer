@@ -224,13 +224,20 @@ export default function ChatWidget() {
 
             {/* Disclaimer AI */}
             <p className="mt-2 text-[11px] leading-tight text-muted">
-              Risposte generate con AI (Claude Haiku). Per parlare direttamente
-              con Fabio usa la{" "}
+              Risposte generate con AI (Claude Haiku, Anthropic — USA). Non
+              inserire dati personali. Vedi la{" "}
+              <a
+                href="/privacy"
+                className="text-primary underline hover:text-primary-dark"
+              >
+                privacy policy
+              </a>
+              . Per parlare con Fabio vai ai{" "}
               <a
                 href="/contatti"
                 className="text-primary underline hover:text-primary-dark"
               >
-                pagina contatti
+                contatti
               </a>
               .
             </p>

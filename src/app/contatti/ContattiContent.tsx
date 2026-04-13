@@ -27,6 +27,7 @@ export default function ContattiContent() {
       email: formData.get("email") as string,
       attivita: formData.get("attivita") as string,
       messaggio: formData.get("messaggio") as string,
+      privacy: formData.get("privacy") === "on",
       website: formData.get("website") as string,
     };
 
@@ -179,6 +180,34 @@ export default function ContattiContent() {
                       className={`${inputClasses} resize-y`}
                       placeholder="Raccontami brevemente di cosa hai bisogno..."
                     />
+                  </div>
+
+                  {/* Consenso privacy */}
+                  <div className="flex items-start gap-3 rounded-xl border border-border bg-surface-warm/50 p-4">
+                    <input
+                      type="checkbox"
+                      id="privacy"
+                      name="privacy"
+                      required
+                      className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-border text-primary focus:ring-2 focus:ring-primary/40"
+                    />
+                    <label
+                      htmlFor="privacy"
+                      className="cursor-pointer text-sm text-muted"
+                    >
+                      Ho letto l&apos;
+                      <a
+                        href="/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline hover:text-primary-dark"
+                      >
+                        informativa privacy
+                      </a>{" "}
+                      e acconsento al trattamento dei miei dati per essere
+                      ricontattato.{" "}
+                      <span className="text-accent">*</span>
+                    </label>
                   </div>
 
                   {/* Honeypot anti-spam */}

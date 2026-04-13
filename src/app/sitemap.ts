@@ -6,7 +6,7 @@ const SITE_URL = "https://fabioregnaud.it";
 
 // Data dell'ultimo aggiornamento significativo del sito.
 // Aggiornare manualmente quando si modificano contenuti importanti.
-const LAST_UPDATED = "2026-04-06";
+const LAST_UPDATED = "2026-04-13";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -39,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_UPDATED,
       changeFrequency: "yearly",
       priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/privacy`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 }
